@@ -1,6 +1,6 @@
 <?php
-require_once "ServerConnection.php";
-include_once "CreateNewLogin.php";
+require "ServerConnection.php";
+include "CreateNewLogin.php";
 ?>
 
 <!DOCTYPE html>
@@ -92,7 +92,7 @@ include_once "CreateNewLogin.php";
       {
           ?>
               <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                  <strong><?= $_SESSION['Status']; ?></strong> <p>Login information created successfully!! </p>
+                  <strong><?= $_SESSION['Status']; ?></strong>
               </div>
           <?php 
           unset($_SESSION['Status']);
