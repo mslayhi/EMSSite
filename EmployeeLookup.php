@@ -40,8 +40,8 @@
         </tbody>
     </table>
     <br>
-    <button type="button" class="" onclick="location.href='ManagerLanding.php'">
-        <span class="">Main Page</span>
+    <button type="button" class="" onclick="location.href='RedirectLandingPage.php'">
+        <span class="">Home Page</span>
         <span class="">
             <ion-icon name="main-page"></ion-icon>
         </span>

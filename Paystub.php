@@ -44,7 +44,7 @@
             </tr>";
             }
             else{
-                echo "No payment information available for: $username";
+                echo 'No payment information available for: '.'<strong>'.$username .'</strong>';
                 echo"\r\n";
             }
 
@@ -66,8 +66,8 @@
         <br>
     </table>
     <br>
-    <button type="button" class="" onclick="location.href='ManagerLanding.php'">
-        <span class="">Main Page</span>
+    <button type="button" class="" onclick="location.href='RedirectLandingPage.php'">
+        <span class="">Home Page</span>
         <span class="">
             <ion-icon name="main-page"></ion-icon>
         </span>

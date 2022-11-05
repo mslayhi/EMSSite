@@ -34,13 +34,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
       else{
          echo '<script>alert("Your Passwords do not match!! Please try again")</script>';
       }
-      if($result1){
-         $_SESSION['success'] = "New Login Created Successfully!!";
-         header("Location: SiteAdminLanding.php");
+      if($result){
+         $_SESSION['Status'] = "New Account Created Successfully!!";
+         header("Location: NewLogin.php");
        }
        else {
            $error = "Login Creation Failed!!! Please Try again.";
-           header("Location: CreateNewLogin.php");
+           header("Location: NewLogin.php");
        }
          // fetch needed results
          $NewUser = mysqli_fetch_all($result, MYSQLI_ASSOC);
