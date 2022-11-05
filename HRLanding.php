@@ -18,7 +18,7 @@
                 <a href = "InsertNewUser.php"> Insert New User Info</a>
                 <a href = "CompanyComm.html">Company Communication</a>
                 <a href = "UploadPay.html"> Upload Employee Paystub</a>
-                <a href = "Feedback.html"> Feedback</a>
+                <a href = "Feedback.php"> Feedback</a>
                 </div>
 
                 <label for ="check">

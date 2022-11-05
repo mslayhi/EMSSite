@@ -124,7 +124,7 @@ include_once "NewUserInsert.php";
             <b>Email</b>
           </label>
           <input type="email" placeholder="Enter Email" name="Email" required>
-          <input type="submit" class="registerbtn" name="Register" >
+          <input type="submit" class="registerbtn" name="Register" Value="Create New User">
     </form>
   </body>
 </html>

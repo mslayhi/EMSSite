@@ -59,11 +59,11 @@ include "feedbackInsert.php";
         <input type="submit" value="Submit">
       </div>
       <div class="">
-      <button type="button" class="" onclick="location.href='ManagerLanding.php'">
+      <button type="button" class="" onclick="location.href='RedirectLandingPage.php'">
         <span class="">Cancel</span>
-          <span class="">
-            <ion-icon name="cancel"></ion-icon>
-          </span>
+        <span class="">
+            <ion-icon name="main-page"></ion-icon>
+        </span>
       </button>
       </div>
     </div>

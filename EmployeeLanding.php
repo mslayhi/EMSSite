@@ -22,7 +22,7 @@ require_once "ServerConnection.php";
                 <a href = "Paystub.php"> Paystub</a>
                 <a href = "AccessWrkHrs.html">  Access Hours</a>
                 <a href = "TimeRequest.html"> Time Request</a>
-                <a href = "feedback.html"> Feedback</a>
+                <a href = "feedback.php"> Feedback</a>
                 </div>
 
                 <label for ="check">
