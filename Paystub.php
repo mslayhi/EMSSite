@@ -26,9 +26,9 @@
             $sql = "SELECT PayPeriod, PayDate FROM paystub JOIN login ON paystub.PII_ID = login.PII_ID
                 WHERE login.UserName = '$username';";
                 
-            $sql1 = "SELECT CONCAT(FirstName,' ',LastName) AS Name, Role AS Title, PayPeriod, PayDate From personal_identifying_info
-                JOIN paystub ON personal_identifying_info.PII_ID = paystub.PII_ID 
-                JOIN login on login.PII_ID = paystub.PII_ID WHERE login.UserName = '$username';";
+            // $sql1 = "SELECT CONCAT(FirstName,' ',LastName) AS Name, Role AS Title, PayPeriod, PayDate From personal_identifying_info
+            //     JOIN paystub ON personal_identifying_info.PII_ID = paystub.PII_ID 
+            //     JOIN login on login.PII_ID = paystub.PII_ID WHERE login.UserName = '$username';";
 
             $result = mysqli_query($db, $sql);
             if(!$result){

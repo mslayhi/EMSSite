@@ -78,6 +78,27 @@ include_once "NewUserInsert.php";
   <body>
     <form action="NewUserInsert.php" method="POST">
       <div class="container">
+
+      <button type="button" class="" onclick="location.href='RedirectLandingPage.php'">
+        <span class="">Home Page</span>
+        <span class="">
+            <ion-icon name="main-page"></ion-icon>
+        </span>
+      </button>
+
+      <?php 
+      
+      if(isset($_SESSION['Status']))
+      {
+          ?>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong><?= $_SESSION['Status']; ?></strong> <p>The users Personal Identifying number is: <?= $_SESSION['PII_ID']; ?> </p>
+              </div>
+          <?php 
+          unset($_SESSION['Status']);
+      }
+
+      ?>
         <center>
           <h1> Insert New User</h1>
         </center>

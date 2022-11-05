@@ -4,6 +4,7 @@ session_start();
 //initializ variables
 $username = "";
 $errors = array();
+$role = "";
 
 // database connection
 $db= mysqli_connect('localhost', 'root', '', 'EMS');

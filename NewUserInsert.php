@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $result1 = mysqli_query($db, $sql1);
 
         // Write query and get result
-        $sql2 = "SELECT PII_ID FROM Personal_Identifying_Info WHERE SSN = '$SSN' ";
+        $sql2 = "SELECT PII_ID FROM Personal_Identifying_Info WHERE SSN = $SSN ";
 
         $result2 = mysqli_query($db, $sql2);
 
@@ -55,9 +55,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         }
 
         //reading each row
-        while($row = mysqli_fetch_array($results2)) {
+        if(!empty($row = $result2->fetch_assoc())) {
 
-            $PiiID = $row["PII_ID"];
+            $_SESSION['PII_ID'] = $row["PII_ID"];
         }
 
 
@@ -71,16 +71,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
       else{
          echo '<script>alert("Something Went Wrong with First Name! try again")</script>';
       }
+
       if($result1){
-         $_SESSION['success'] = "New Account Created Successfully!!";
-         header("Location: NewUserCreated.php");
+         $_SESSION['Status'] = "New Account Created Successfully!!";
+        //  echo "<h1> {$_SESSION['success']} </h1> <p>The users Personal Identifying number is: {$PiiID} </p>";
+         header("Location: InsertNewUser.php");
        }
        else {
-           $error = "Account Creation Failed!!! Please Try again.";
+        $_SESSION['Status'] = "Account Creation Failed!!! Please Try again.";
+        //    echo "<h1> {$_SESSION['Status']} </h1>";
            header("Location: InsertNewUser.php");
        }
          // fetch needed results
-         $NewUser = mysqli_fetch_all($result1, MYSQLI_ASSOC);
+        //  $NewUser = mysqli_fetch_all($result1, MYSQLI_ASSOC);
 
      mysqli_close($db);
 }
