@@ -7,8 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body style="margin:100px 600px 100px 200px;">
-    <h2>Employee Information</h2>
+<button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
+        <span class="">Home Page</span>
+        <span class="">
+            <ion-icon name="main-page"></ion-icon>
+        </span>
+    </button>
+    <center>
+        <h2>Employee Information</h2>
+    </center>
+    <hr>
     <br>
+
     <table class="table" style = "border: 1px solid black">
         <thead class="table-header" style="background-color: lightgreen;">
             <tr>
@@ -60,11 +70,6 @@
         </tbody>
     </table>
     <br>
-    <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
-        <span class="">Home Page</span>
-        <span class="">
-            <ion-icon name="main-page"></ion-icon>
-        </span>
-    </button>
+    
 </body>
 </html>
