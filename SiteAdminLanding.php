@@ -15,9 +15,9 @@
 
                 <h2> <a href="#" class ="logo">E M S</a></h2>
                 <div class ="navigation">
-                <a href = "ModifyUsers.Html"> Modify Users</a>
+                <a href = "SearchModifyUser.php"> Modify Users</a>
                 <a href = "NewLogin.php"> Create New User Login</a>
-                <a href = "AddUsers.Html"> Add Users</a>
+                <a href = "AddUsers.Html"> Delete User</a>
                 <!-- 
                 <a href = "#"> Delete User</a>
                 <a href = "#"> Update User</a> > 
