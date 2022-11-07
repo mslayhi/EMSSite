@@ -12,7 +12,7 @@
 <body>
     <div class = "left">
         <?php
-            include 'ServerConnection.php';
+            //include 'ServerConnection.php';
             include 'EmployeeLookup.php';
         ?>
     </div>
@@ -28,17 +28,42 @@
         <br>
         <form action="ProcessSchedule.php" method="POST">
             <div class="container">
-                  <label> Enter EmployeeID:  </label>
-                  <input type="number" name="EmployeeID" placeholder="ID # from above " min="1" required />
+                  <label> EmployeeID :  </label>
+                  <input type="number" name="EmployeeID" placeholder="ID # from above " min="1"  required />
                   <br>
                   <br>
+                  <div>
+                  <label> Work Shift : </label>
+                        <select id = "Shift" name="Shift" width = "15">
+                              <option value="1st" name="First">1st</option>
+                              <option value="2nd" name="Second">2nd</option>
+                        </select>
                   <br>
-                  <input type="Submit" class="AddSchedule" name="AddSchedule" value = "Add Schedule" >
-                  <input type="Submit" class="AddSchedule" name="AddSchedule" value = "Update Schedule">
-                  <input type="Submit" class="AddSchedule" name="AddSchedule" value = "Delete Schedule">
+                  <br>
+                  <label> Start Time : </label>
+                  <input type="time" name="starttime" />
+                  <label> End Time : </label>
+                  <input type="time" name="endtime" />
+                  </div>
+                  <br>
+                  <div>
+                        <label>Work Days : </label>
+                        <input type = "checkbox" name = "Work_Days_list[]" value = "M">
+                        <label for = "M">Monday</label>
+                        <input type = "checkbox" name = "Work_Days_list[]" value = "T">
+                        <label for = "T">Tuesday</label>
+                        <input type = "checkbox" name = "Work_Days_list[]" value = "W">
+                        <label for = "W">Wednesday</label>
+                        <input type = "checkbox" name = "Work_Days_list[]" value = "Th">
+                        <label for = "Th">Thursday</label>
+                        <input type = "checkbox" name = "Work_Days_list[]" value = "F">
+                        <label for = "F">Friday</label><br>
+                  <br>
+                  <input type="Submit" name="ProcessSchedule" value = "Add Schedule" >
+                  <input type="Submit" name="ProcessSchedule" value = "Update Schedule">
+                  <input type="Submit" name="ProcessSchedule" value = "Delete Schedule">
             </div>
-         </form>
-        
+         </form>    
         <br>
         <br>
       <div>
