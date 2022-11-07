@@ -14,7 +14,6 @@ require_once "ServerConnection.php";
     </head>
     <body>
         <section>
-                <input type="checkbox" id="check">
             <header>
 
                 <h2> <a href="#" class ="logo">E M S</a></h2>
@@ -25,11 +24,7 @@ require_once "ServerConnection.php";
                 <a href = "feedback.php"> Feedback</a>
                 </div>
 
-                <label for ="check">
-                    <i class ="fas fa-bars menu-btn"></i>
-                    <i class ="fas fa-times close-btn"></i>
-                </label>
-
+            
             </header>
 
             <div>
