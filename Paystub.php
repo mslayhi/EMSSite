@@ -18,6 +18,28 @@
             </tr>
         </thead>
         <tbody>
+            <style>
+      .button {
+       background-color: #0066A2;
+       color: white;
+       padding: 12px 20px;
+       border: none;
+       border-radius: 4px;
+       line-height: 12px;
+       width: 120px;
+       font-size: 8pt;
+       margin-left: 0px;
+       position: absolute;
+     }
+
+     .button:hover {
+       background-color: #02c8db;
+     }
+
+     .button:active {
+       background-color: #88ef9e;
+     }
+           </style>
             <?php
             include 'ServerConnection.php';
 
@@ -66,7 +88,7 @@
         <br>
     </table>
     <br>
-    <button type="button" class="" onclick="location.href='RedirectLandingPage.php'">
+    <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
         <span class="">Home Page</span>
         <span class="">
             <ion-icon name="main-page"></ion-icon>
