@@ -10,7 +10,6 @@
     </head>
     <body>
         <section>
-                <input type="checkbox" id="check">
             <header>
 
                 <h2> <a href="#" class ="logo">E M S</a></h2>
@@ -21,15 +20,12 @@
                 <a href = "Feedback.php"> Feedback</a>
                 </div>
 
-                <label for ="check">
-                    <i class ="fas fa-bars menu-btn"></i>
-                    <i class ="fas fa-times close-btn"></i>
-                </label>
+               
 
             </header>
 
             <div class="navigation">
-                    <button type="button" class="" onclick="location.href='logout.php'">
+                    <button type="button" class="signout-button" onclick="location.href='logout.php'">
                         <span class="">Sign Out</span>
                         <span class="">
                             <ion-icon name="log-out-outline"></ion-icon>
