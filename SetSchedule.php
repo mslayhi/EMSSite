@@ -69,12 +69,12 @@
             <div class="container">
 
                 <label> EmployeeID :  </label>
-                <input type = "number" name = "number" class = "number" placeholder = "ID# " min = "1" required />
+                <input type = "number" name = "number" class = "number" placeholder = "ID# " min = "1" style = "width:15%" required />
                 <br>
                 <br>
                 <div>
                     <label> Work Shift : </label>
-                        <select id = "Shift" class = "Shift" name = "Shift" width = "15">
+                        <select id = "Shift" class = "Shift" name = "Shift" style = "width:15%">
                             <option value = "1st" name = "First">1st</option>
                             <option value = "2nd" name = "Second">2nd</option>
                         </select>
