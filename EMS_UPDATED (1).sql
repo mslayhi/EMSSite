@@ -207,6 +207,7 @@ CREATE TABLE TimeOffRequest (
   PII_ID INT UNSIGNED,
   DaysRequested VARCHAR(40),
   RequestReason VARCHAR(100),
+  TimeOffType VARCHAR (7),
   PRIMARY KEY (ID),
   UNIQUE KEY (PII_ID, DaysRequested),
   FOREIGN KEY (PII_ID) REFERENCES Personal_Identifying_Info(PII_ID) ON DELETE CASCADE ON UPDATE CASCADE
