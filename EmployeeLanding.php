@@ -19,7 +19,7 @@ require_once "ServerConnection.php";
                 <h2> <a href="#" class ="logo">E M S</a></h2>
                 <div class ="navigation">
                 <a href = "Paystub.php"> Paystub</a>
-                <a href = "AccessWrkHrs.html">  Access Hours</a>
+                <a href = "AccessWrkHrs.php">  Access Hours</a>
                 <a href = "TimeRequest.html"> Time Request</a>
                 <a href = "feedback.php"> Feedback</a>
                 </div>
