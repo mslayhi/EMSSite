@@ -10,7 +10,7 @@ $startTime = $_POST['starttime'];
 $endTime = $_POST['endtime'];
 $SchedulerID = '';
 
-If(isset($_POST)){
+If(isset($employeeID)){
 
     /*this formats the data for WorkDays column of Schedule table. The basic idea is to separate each days
     by comma and treat it as a single varchar entry for the data*/
