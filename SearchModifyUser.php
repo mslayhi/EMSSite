@@ -1,6 +1,7 @@
 <?php
 require "ServerConnection.php";
 // include "PullUserInfo.php";
+
 ?>
 
 <!DOCTYPE html>
