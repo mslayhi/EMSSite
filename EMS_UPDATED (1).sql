@@ -4,11 +4,11 @@ such situation, reruning the script will resolve the insertion errors (these err
 */
 
 -- drops the database if it is already there.
-DROP DATABASE IF EXISTS EMS_UPDATED; 
+DROP DATABASE IF EXISTS EMS; 
 
-CREATE DATABASE EMS_UPDATED;
+CREATE DATABASE EMS;
 
-USE EMS_UPDATED;
+USE EMS;
 
 CREATE TABLE Personal_Identifying_Info (
   PII_ID INT UNSIGNED AUTO_INCREMENT,
@@ -214,10 +214,10 @@ CREATE TABLE TimeOffRequest (
 );
 
 -- inserts multiple rows into the table.
-INSERT INTO TimeOffRequest (PII_ID, DaysRequested, RequestReason) values 
-(1, 'M, T, F', 'Holiday'),
-(2, 'M-F', 'Holiday'),
-(3, 'M, TH', "Doctor's Appointment");
+INSERT INTO TimeOffRequest (PII_ID, DaysRequested, RequestReason, TimeOffType) values 
+(1, 'M, T, F', 'Holiday', 'Paid'),
+(2, 'M-F', 'Holiday', 'Unpaid'),
+(3, 'M, TH', "Doctor's Appointment", 'Paid');
 
 -- creates table WorkedHours. Note that the PII_ID is the individaul's id whose workedHours info is stored in the table.
 CREATE TABLE WorkedHours (
