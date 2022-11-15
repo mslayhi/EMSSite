@@ -1,6 +1,6 @@
 <?php
 include_once 'ServerConnection.php';
-include 'SearchModifyUser.php' ;
+// include 'SearchModifyUser.php' ;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {    
@@ -54,51 +54,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         mysqli_stmt_close($stmt);
     }
 
-    // billing info
-    $result=mysqli_query($conn,"SELECT 1 FROM BillingInfo WHERE CustomerID = $customerID");
-    $sql = "";
-    if (mysqli_num_rows($result) > 0){
-        $sql = "
-        UPDATE BillingInfo SET
-        CardNumber = ?
-        ,CardExpDate = ?
-        ,CardCCVNum = ?
-        WHERE CustomerID = ?;
-        ";
-    }else {
-        $sql = "
-        INSERT INTO BillingInfo (CardNumber, CardExpDate, CardCCVNum, CustomerID, BillInsertDate, BillUpdateDate)
-        VALUES (?, ?, ?, ?, current_timestamp, current_timestamp);";
-    }
-  
-    if($stmt = mysqli_prepare($conn, $sql)){
-
-        mysqli_stmt_bind_param($stmt, "ssii", $CreditCardNum,$CardExpDate,$CardCCVNum,$customerID);
-
-        $CreditCardNum = str_replace("-", "", $_POST["CardNumber"]);
-        $CardCCVNum = $_POST["CardCCVNum"];
-        $CardExpDate = $_POST["CardExpDate"];
-        
-        if(mysqli_stmt_execute($stmt)){
-            
-        } else{
-            echo "Oops! Something went wrong. Please try again later. " . mysqli_error($conn);
-        }
-        // Close statement
-        mysqli_stmt_close($stmt);
-    }
-
-    header("location: UserProfile.php");
+    header("location: ModifyUsers.php");
     exit;
 
 }else{
     // get
-
     // customer info
-    $sql = "SELECT FirstName, LastName, TelNum, CustEmail, StreetNumber, StreetName, City, Zipcode, State, Allergy  FROM CustomerInfo WHERE CustomerID = ? ";
-    if($stmt = mysqli_prepare($conn, $sql)){
+
+
+    $sql = "SELECT  FirstName, LastName, DateOfBirth, SSN, Address, PhoneNo, Email  FROM personal_identifying_info WHERE PII_ID = ? ";
+    if($stmt = mysqli_prepare($db, $sql)){
         
-        mysqli_stmt_bind_param($stmt, "i", $customerID);
+        mysqli_stmt_bind_param($stmt, "i", $PiiID);
 
         if(mysqli_stmt_execute($stmt)){
             
@@ -106,13 +73,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                 
             if(mysqli_stmt_num_rows($stmt) == 1){                    
                 
-                mysqli_stmt_bind_result($stmt, $FirstName, $LastName, $TelNum, $email, $StNum, $STName, $City, $PCode, $State, $Allergy);
+                mysqli_stmt_bind_result($stmt, $PiiID,$FirstName,$LastName,$DOB,$SSN,$Address,$TelNum,$email);
                 if(mysqli_stmt_fetch($stmt)){
                 }
                 
             } else{
-                // email doesn't exist, display a generic error message
-                echo  "Invalid email or password.";
+                // display a generic error message
+                echo  "Invalid Information.";
             }
         } else{
             echo "Oops! Something went wrong. Please try again later.";
@@ -121,31 +88,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         mysqli_stmt_close($stmt);
     }
 
-    // billing info
-    $sql = "SELECT CardNumber, CardExpDate, CardCCVNum  FROM BillingInfo WHERE CustomerID = ? ";
-    if($stmt = mysqli_prepare($conn, $sql)){
-    
-        mysqli_stmt_bind_param($stmt, "i", $customerID);
-        //$CustomerIDparam=$_SESSION["CustomerID"];
-
-        if(mysqli_stmt_execute($stmt)){
-            
-            mysqli_stmt_store_result($stmt);
-                
-            if(mysqli_stmt_num_rows($stmt) == 1){                    
-                
-                mysqli_stmt_bind_result($stmt, $CreditCardNum,$CardExpDate,$CardCCVNum);
-                if(mysqli_stmt_fetch($stmt)){
-
-                
-                }
-            } 
-        } else{
-            echo "Oops! Something went wrong. Please try again later.";
-        }
-        // Close statement
-        mysqli_stmt_close($stmt);
-    }
 }
 
 

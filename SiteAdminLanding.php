@@ -14,7 +14,7 @@
 
                 <h2> <a href="#" class ="logo">E M S</a></h2>
                 <div class ="navigation">
-                <a href = "SearchModifyUser.php"> Modify Users</a>
+                <a href = "TestEditPage.php"> Modify Users</a>
                 <a href = "NewLogin.php"> Create New User Login</a>
                 <a href = "SearchDeleteUser.php"> Delete User</a>
                 <!-- 

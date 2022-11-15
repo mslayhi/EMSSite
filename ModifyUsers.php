@@ -1,7 +1,6 @@
 <?php
-require "ServerConnection.php";
-include "UserModification.php";
-require "ServerConnection.php";
+// require "ServerConnection.php";
+// include "UserModification.php";
 include "PullUserInfo.php";
 ?>
 
@@ -107,34 +106,34 @@ include "PullUserInfo.php";
         </center>
         <hr>
         <label> Personal Identifying Number: </label>
-        <input type="number" name="PII_ID" placeholder="PII_ID #" min="0" required />
+        <input type="number" name="PII_ID" placeholder="PII_ID #" min="0" value="<?php echo @$_POST['PII_ID'] ?>" required />
         <br>
         <br>
         <label> First name </label>
-        <input type="text" name="FirstName" placeholder="Firstname" size="15" required />
+        <input type="text" name="FirstName" placeholder="Firstname" size="15" value="<?php echo @$_POST['FirstName'] ?>" required />
         <label> Lastname: </label>
         <br>
-        <input type="text" name="LastName" placeholder="Lastname" size="15" required />
+        <input type="text" name="LastName" placeholder="Lastname" size="15" value="<?php echo @$_POST['LastName'] ?>" required />
         <label> DOB: </label>
-        <input type="date" name="DOB" placeholder="Birth Date" size="15" required />
+        <input type="date" name="DOB" placeholder="Birth Date" size="15" value="<?php echo @$_POST['DateOfBirth'] ?>" required />
         <br>
         <br>
         <br>
         <label> Social Security Number: </label>
-        <input type="text" name="SocialSecurity" placeholder="Expected pattern is ###-##-####" size=" 15"/>
+        <input type="text" name="SocialSecurity" placeholder="Expected pattern is ###-##-####" size=" 15"value="<?php echo @$_POST['SSN'] ?>" required/>
         <div> Phone : </label>
-          <input type="tel" name="TelNum" placeholder="phone #" size="10" / required>
+          <input type="tel" name="TelNum" placeholder="phone #" size="10" value="<?php echo @$_POST['PhoneNo'] ?>" required/>
           <br>
           <br>
           <label for="address">Current Address :
           </label>
-          <textarea cols="80" name="Address" rows="5" placeholder="Current Address" value="address" required></textarea>
+          <textarea cols="80" name="Address" rows="5" placeholder="Current Address" value="<?php echo @$_POST['Address'] ?>" required></textarea>
           <label for="email">
             <b>Email</b>
           </label>
           <input type="email" placeholder="Enter Email" name="Email" required>
         <label> Username: </label>
-        <input type="text" name="UserName" placeholder="Username" size="15" required />
+        <input type="text" name="UserName" placeholder="Username" size="15" value="<?php echo @$_POST['UserName'] ?>" required />
         <div>
         <div>
           <label> Role : </label>
