@@ -101,7 +101,7 @@ include "CreateNewLogin.php";
       ?>
 
         <center>
-          <h1> Insert New User</h1>
+          <h1> Create User Login</h1>
         </center>
         <hr>
         <label> Personal Identifying Number: </label>
@@ -129,7 +129,7 @@ include "CreateNewLogin.php";
             <b>Confirm Password</b>
           </label>
           <input type="password" placeholder="Retype Password" name="CPassword" required>
-          <input type="submit" class="registerbtn" name="Register" >
+          <input type="submit" class="registerbtn" name="Create Login" >
     </form>
   </body>
 </html>

@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $Role = trim($_POST['Role']);
     $PiiID = trim($_POST['PII_ID']);
     $creator = $_SESSION['username'];
-    $Creator_ID = "";     
+    $Creator_ID = 0;     
     $UserName = trim($_POST['UserName']);
 
      
@@ -56,8 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         // Write query and get result
 
         $sql = "UPDATE Login 
-        SET CreatorID = '$Creator_ID', PII_ID = '$sanitized_PiiID', UserName = '$sanitized_UserName',Password = '$sanitized_pass',Role = '$sanitized_Role'
-        WHERE PII_ID = '$PiiID' ";
+        SET CreatorID = $Creator_ID, PII_ID = $sanitized_PiiID, UserName = '$sanitized_UserName',Password = '$sanitized_pass',Role = '$sanitized_Role'
+        WHERE PII_ID = $PiiID ";
 
         $result = mysqli_query($db, $sql);
 

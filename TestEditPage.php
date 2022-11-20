@@ -1,3 +1,8 @@
+<?php
+require "ServerConnection.php";
+include "UserUpdateRequest.php";
+?>
+
 <html>
 
 <head>
@@ -20,23 +25,24 @@
 
 <!-- Remember that these feilds get keyed off the id of the input -->
 <body>
-	<div class="container">
-		<h1>Modify User</h1>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="form-group">
-					<label>User Identifying ID</label>
-					<input type='text' name="PII_ID"
-						id='PII_ID' class='form-control'
-						placeholder='Enter PII ID'
-						onkeyup="GetDetail(this.value)" value="">
+	<form action="UserUpdateRequest.php" method="POST">
+
+		<div class="container">
+			<h1>Modify User</h1>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label>User Identifying ID</label>
+						<input type='text' name="PII_ID"
+							id='PII_ID' class='form-control'
+							placeholder='Enter PII ID'
+							onkeyup="GetDetail(this.value)" value="">
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="form-group">
-					<form action="UserUpdateRequest.php" method="POST">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="form-group">
 						<label> First name </label>
 						<input class='form-control' type="text" name="FirstName" id="FirstName" placeholder="First Name" size="15"  value="" required />
 						<label> Lastname: </label>
@@ -63,7 +69,7 @@
 						<label> Username: </label>
 						<input class='form-control' type="text" name="UserName" id="UserName" placeholder="Username" size="15" value="" required />
 						<label> Password: </label>
-						<input class='form-control' type="text" name="pass" id="Password" placeholder="Password" size="15" value="" required />
+						<input class='form-control' type="text" name="Password" id="Password" placeholder="Password" size="15" value="" required />
 						<br>
 						<br>
 						<label> Role : </label>
@@ -76,11 +82,11 @@
 						<br>
 						<br>
 						<input type="submit" class="registerbtn" name="UpdateUser" value="Update User Information" >
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</form>
 	<script>
 
 		// onkeyup event will occur when the user
