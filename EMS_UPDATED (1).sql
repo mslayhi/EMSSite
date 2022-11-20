@@ -205,11 +205,13 @@ INSERT INTO Schedule (UserID, SchedulerID, WorkDays, Shift, StartTime, EndTime) 
 CREATE TABLE TimeOffRequest (
   ID INT UNSIGNED AUTO_INCREMENT,
   PII_ID INT UNSIGNED,
-  DaysRequested VARCHAR(40),
-  RequestReason VARCHAR(100),
   TimeOffType VARCHAR (7),
+  RequestReason VARCHAR(100),
+  StartDate Date NOT NULL,
+  EndDate Date NOT NULL,
+  OtherReason VARCHAR(500),
   PRIMARY KEY (ID),
-  UNIQUE KEY (PII_ID, DaysRequested),
+  UNIQUE KEY (PII_ID),
   FOREIGN KEY (PII_ID) REFERENCES Personal_Identifying_Info(PII_ID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
