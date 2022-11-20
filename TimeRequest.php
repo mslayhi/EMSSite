@@ -1,3 +1,8 @@
+<?php
+require_once "ServerConnection.php";
+include_once "TimeReq.php";
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -87,50 +92,59 @@
         <hr>
         <div>
           <label> Type of Time-off : </label>
-          <select>
-            <option value="paidtimefff" name="typeoftimeoff">Paid</option>
-            <option value="unpaidtimeoff" name="typeoftimeoff">Unpaid</option>
-          </select>
-        </div>
+          <div class="timeoff">
+            <label>
+              <input type="radio" name="TimeOffType" value="paid" required>
+              <span>paid</span>
+            </label>
+          </div>
+          <div class="timeoff">
+            <label>
+              <input type="radio" name="TimeOffType" value="unpaid" required>
+              <span>unpaid</span>
+            </label>
+            <br>
+
         <label for="Date">Beginning Date:</label>
-        <input type="date" id="startdate" name="startdate">
+        <input type="date" id="startDate" name="startDate">
         <label for="Date">Return to Work:</label>
-        <input type="date" id="enddate" name="enddate">
+        <input type="date" id="endDate" name="endDate">
+       
         <fieldset>
           <legend>Please select your reason for request:</legend>
           <div class="radio">
             <label>
-              <input type="radio" name="reason" value="juryduty" required>
+              <input type="radio" name="RequestReason" value="juryduty" required>
               <span>Jury Duty</span>
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="reason" value="bereavement" required>
+              <input type="radio" name="RequestReason" value="bereavement" required>
               <span>Bereavement</span>
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="reason" value="maternity/paternityleave" required>
+              <input type="radio" name="RequestReason" value="maternity/paternityleave" required>
               <span>Maternity/Paternity</span>
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="reason" value="sick" required>
+              <input type="radio" name="RequestReason" value="sick" required>
               <span>Sick</span>
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="reason" value="other" required>
+              <input type="radio" name="RequestReason" value="other" required>
               <span>Other</span>
             </label>
           </div>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="If Selected Other, please specify:" style="height:100px" style="width:100%"></textarea>
+        <textarea id="OtherReason" name="OtherReason" placeholder="If Selected Other, please specify:" style="height:100px" style="width:100%"></textarea>
       </div>
       <input type="submit" class="registerbtn" name="Register">
     </form>
