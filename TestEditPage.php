@@ -33,66 +33,53 @@
 				</div>
 			</div>
 		</div>
-        <label> First name </label>
-        <input class='form-control' type="text" name="FirstName" id="FirstName" placeholder="Firstname" size="15" onkeyup="GetDetail(this.value)" value="" required />
-        <label> Lastname: </label>
-        <br>
-        <input class='form-control' type="text" name="LastName" id="LastName" placeholder="Lastname" size="15" onkeyup="GetDetail(this.value)" value="" required />
-        <label> DOB: </label>
-        <input class='form-control' type="date" name="DOB" id="DOB" placeholder="Birth Date" size="15" onkeyup="GetDetail(this.value)" value="" required />
-        <br>
-        <br>
-        <br>
-        <label> Social Security Number: </label>
-        <input class='form-control' type="text" name="SocialSecurity" id="SocialSecurity" placeholder="Expected pattern is ###-##-####" size=" 15" onkeyup="GetDetail(this.value)" value="" required/>
-        <div> Phone : </label>
-          <input class='form-control' type="tel" name="TelNum" id="TelNum" placeholder="phone #" size="10" onkeyup="GetDetail(this.value)" value="" required/>
-          <br>
-          <br>
-          <label for="address">Current Address :
-          </label>
-          <textarea class='form-control' cols="80" name="Address" id="Address" rows="5" placeholder="Current Address" onkeyup="GetDetail(this.value)" value="" required></textarea>
-          <label for="email">
-            <b>Email</b>
-          </label>
-          <input class='form-control' type="email" placeholder="Enter Email" name="Email" id="Email" required>
-        <!-- <label> Username: </label>
-        <input class='form-control' type="text" name="UserName" id="UserName" placeholder="Username" size="15" onkeyup="GetDetail(this.value)" value="" required />
-        <div>
-        <div>
-          <label> Role : </label>
-          <select name="Role">
-            <option value="Employee" name="Role" id="Role">Employee</option>
-            <option value="Site Admin" name="Role" id="Role">Site Admin</option>
-            <option value="HR" name="Role" id="Role">HR</option>
-            <option value="Manager" name="Role" id="Role">Manager</option>
-          </select>
-        </div> -->
-        <br>
-          <input type="submit" class="registerbtn" name="UpdateUser" value="Update User Information" >
-
-		<!-- <div class="row">
-			<div class="col-lg-6">
-				<div class="form-group">
-					<label>First Name:</label>
-					<input type="text" name="first_name"
-						id="first_name" class="form-control"
-						placeholder='First Name'
-						value="">
-				</div>
-			</div>
-		</div>
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="form-group">
-					<label>Last Name:</label>
-					<input type="text" name="last_name"
-						id="last_name" class="form-control"
-						placeholder='Last Name'
-						value="">
+					<form action="UserUpdateRequest.php" method="POST">
+						<label> First name </label>
+						<input class='form-control' type="text" name="FirstName" id="FirstName" placeholder="First Name" size="15"  value="" required />
+						<label> Lastname: </label>
+						<br>
+						<input class='form-control' type="text" name="LastName" id="LastName" placeholder="Last Name" size="15"  value="" required />
+						<label> DOB: </label>
+						<input class='form-control' type="date" name="DOB" id="DOB" placeholder="Date oF Birth" size="15" value="" required />
+						<br>
+						<br>
+						<br>
+						<label> Social Security Number: </label>
+						<input class='form-control' type="text" name="SocialSecurity" id="SocialSecurity" placeholder="Expected pattern is ###-##-####" size=" 15" value="" required/>
+						<div> Phone : </label>
+						<input class='form-control' type="tel" name="TelNum" id="TelNum" placeholder="" size="10" value="" required/>
+						<br>
+						<br>
+						<label for="address">Current Address :
+						</label>
+						<textarea class='form-control' cols="80" name="Address" id="Address" rows="5" placeholder="Current Address" value="" required></textarea>
+						<label for="email">
+							<b>Email</b>
+						</label>
+						<input class='form-control' type="email" placeholder="Enter Email" name="Email" id="Email" required>
+						<label> Username: </label>
+						<input class='form-control' type="text" name="UserName" id="UserName" placeholder="Username" size="15" value="" required />
+						<label> Password: </label>
+						<input class='form-control' type="text" name="pass" id="Password" placeholder="Password" size="15" value="" required />
+						<br>
+						<br>
+						<label> Role : </label>
+						<select name="Role" id="Role">
+							<option value="Employee" name="Role">Employee</option>
+							<option value="Site Admin" name="Role">Site Admin</option>
+							<option value="HR" name="Role">HR</option>
+							<option value="Manager" name="Role">Manager</option>
+						</select>
+						<br>
+						<br>
+						<input type="submit" class="registerbtn" name="UpdateUser" value="Update User Information" >
+					</form>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 	<script>
 
@@ -108,8 +95,9 @@
 				document.getElementById("TelNum").value = "";
 				document.getElementById("Address").value = "";
 				document.getElementById("Email").value = "";
-				// document.getElementById("UserName").value = "";
-				// document.getElementById("Role").value = "";
+				document.getElementById("UserName").value = "";
+				document.getElementById("Password").value = "";
+				document.getElementById("Role").value = "";
 				return;
 			}
 			else {
@@ -130,36 +118,18 @@
 						// Returns the response data as a
 						// string and store this array in
 						// a variable assign the value
-						// received to first name input field
+						// received to all input fields
 						
-						document.getElementById
-							("FirstName").value = myObj[0];
-							("$LastName").value = myObj[1];
-							("$DOB").value = myObj[2];
-							("SocialSecurity").value = myObj[3];
-							("TelNum").value = myObj[4];
-							("Address").value = myObj[5];
-							("Email").value = myObj[6];
-						
-						// Assign the value received to
-						// last name input field
-						// document.getElementById(
-						// 	"last_name").value = myObj[1];
-                        // document.getElementById(
-                        //     "DOB").value = myObj[2];
-                        // document.getElementById(
-                        //     "SocialSecurity").value = myObj[3];
-                        // document.getElementById(
-                        //     "TelNum").value = myObj[4];
-                        // document.getElementById(
-                        //     "Address").value = myObj[5];
-                        // document.getElementById(
-                        //     "Email").value = myObj[6];
-                        // document.getElementById(
-                        //     "UserName").value = myObj[7];
-                        // document.getElementById(
-                        //     "Role").value = myObj[8];
-
+						document.getElementById("FirstName").value = myObj[0];
+						document.getElementById("LastName").value = myObj[1];
+						document.getElementById("DOB").value = myObj[2];
+						document.getElementById("SocialSecurity").value = myObj[3];
+						document.getElementById("TelNum").value = myObj[4];
+						document.getElementById("Address").value = myObj[5];
+						document.getElementById("Email").value = myObj[6];
+						document.getElementById("UserName").value = myObj[7];
+						document.getElementById("Password").value = myObj[8];
+						document.getElementById("Role").value = myObj[9];
 					}
 				};
 

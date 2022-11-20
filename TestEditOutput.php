@@ -15,6 +15,11 @@ if ($PII_ID !== "") {
 
 	$row = mysqli_fetch_array($query);
 
+	$query2 = mysqli_query($db, "SELECT  UserName, Password, Role FROM login WHERE PII_ID ='$PII_ID'");
+
+	$row2 = mysqli_fetch_array($query2);
+	
+
 	// Get the Information 
 	$FirstName = $row["FirstName"];
 	$LastName = $row["LastName"];
@@ -23,12 +28,13 @@ if ($PII_ID !== "") {
 	$TelNum = $row["Address"];
 	$Address = $row["PhoneNo"];
 	$Email = $row["Email"];
-	// $UserName = $row["last_name"];
-	// $Role = $row["last_name"];
+	$UserName = $row2["UserName"];
+	$Password = $row2["Password"];
+	$Role = $row2["Role"];
 }
 
 // Store it in a array
-$result = array("$FirstName", "$LastName", "$DOB", "$SocialSecurity", "$TelNum", "$Address", "$Email");
+$result = array("$FirstName", "$LastName", "$DOB", "$SocialSecurity", "$TelNum", "$Address", "$Email", "$UserName", "$Password", "$Role");
 
 // Send in JSON encoded form
 $myJSON = json_encode($result);
