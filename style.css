@@ -260,3 +260,11 @@ header.ems{
     font-size:medium;
     color:#45a049;
   }
+
+  
+.footer {
+  background-color:white;
+  position: fixed;
+  bottom: 15%;
+  width: 100vw;
+  }
