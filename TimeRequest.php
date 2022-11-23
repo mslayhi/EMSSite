@@ -1,6 +1,6 @@
 <?php
 require_once "ServerConnection.php";
-include_once "TimeReq.php";
+//include_once "TimeReq.php";
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ include_once "TimeReq.php";
 
       input[type=text],
       textarea {
-        width: 100%;
+        width: 93%;
         padding: 15px;
         margin: 5px 0 22px 0;
         display: inline-block;
@@ -53,11 +53,12 @@ include_once "TimeReq.php";
         background-color: #0066A2;
         color: white;
         padding: 16px 20px;
-        margin: 8px 0;
+        margin: 0px 60px 0px 0px;
         border: none;
         cursor: pointer;
-        width: 100%;
+        width: 200px;
         opacity: 0.9;
+        font-size: 10pt;
       }
 
       .registerbtn:hover {
@@ -65,7 +66,7 @@ include_once "TimeReq.php";
       }
 
       .adjust-line-height {
-        line-height: 1em;
+        line-height: 15px;
       }
 
       input[type=submit] {
@@ -75,16 +76,37 @@ include_once "TimeReq.php";
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        float: right;
+        float: left;
       }
 
       input[type=submit]:hover {
         background-color: #45a049;
       }
+
+      .button {
+       background-color: #0066A2;
+       color: white;
+       padding: 12px 20px;
+       border: none;
+       border-radius: 4px;
+       line-height: 15px;
+       width: 200px;
+       font-size: 8pt;
+       margin-left: 10px;
+       position: relative;
+     }
+
+     .button:hover {
+       background-color: #02c8db;
+     }
+
+     .button:active {
+       background-color: #88ef9e;
+     }
     </style>
   </head>
   <body>
-    <form>
+    <form action = "TimeReq.php" method = '$_REQUEST'>
       <div class="container">
         <center>
           <h1> TIME-OFF REQUEST</h1>
@@ -147,6 +169,12 @@ include_once "TimeReq.php";
         <textarea id="OtherReason" name="OtherReason" placeholder="If Selected Other, please specify:" style="height:100px" style="width:100%"></textarea>
       </div>
       <input type="submit" class="registerbtn" name="Register">
+      <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
+        <span class="">Home Page</span>
+        <span class="">
+            <ion-icon name="main-page"></ion-icon>
+        </span>
+    </button>
     </form>
   </body>
 </html>

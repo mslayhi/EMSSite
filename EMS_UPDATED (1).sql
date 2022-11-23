@@ -203,21 +203,21 @@ INSERT INTO Schedule (UserID, SchedulerID, WorkDays, Shift, StartTime, EndTime) 
 
 -- creates TimeOffRequest table. Note that PII_ID is the individual whose information is stored in this table. 
 CREATE TABLE TimeOffRequest (
-  ID INT UNSIGNED AUTO_INCREMENT,
+  ID INT UNSIGNED AUTO_INCREMENT NOT NULL,
   PII_ID INT UNSIGNED,
   TimeOffType VARCHAR (7),
-  RequestReason VARCHAR(100),
+  RequestReason VARCHAR(500) NOT NULL,
   StartDate Date NOT NULL,
   EndDate Date NOT NULL,
-  OtherReason VARCHAR(500),
+  Status VARCHAR(20) DEFAULT 'Pending';
   PRIMARY KEY (ID),
   UNIQUE KEY (PII_ID),
   FOREIGN KEY (PII_ID) REFERENCES Personal_Identifying_Info(PII_ID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- inserts multiple rows into the table.
-INSERT INTO `TimeOffRequest` (`ID`, `PII_ID`, `TimeOffType`, `RequestReason`, `StartDate`, `EndDate`, `OtherReason`) 
-VALUES (NULL, '1', 'unpaid', 'sick', '2022-11-22', '2022-11-24', 'I am sick and I will provide a doctors note');
+INSERT INTO TimeOffRequest (PII_ID, TimeOffType, RequestReason, StartDate, EndDate) 
+VALUES (1, 'unpaid', 'sick', '2022-11-22', '2022-11-24');
 
 -- creates table WorkedHours. Note that the PII_ID is the individaul's id whose workedHours info is stored in the table.
 CREATE TABLE WorkedHours (
@@ -254,7 +254,3 @@ INSERT INTO PaidTimeOff (PII_ID, HoursAvailable, HoursUsed) values
 (3, 3, 1), 
 (4, 0, 4),
 (5, 1, 1);
-
-
-
-
