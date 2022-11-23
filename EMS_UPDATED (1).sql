@@ -209,7 +209,7 @@ CREATE TABLE TimeOffRequest (
   RequestReason VARCHAR(500) NOT NULL,
   StartDate Date NOT NULL,
   EndDate Date NOT NULL,
-  Status VARCHAR(20) DEFAULT 'Pending';
+  Status VARCHAR(20) DEFAULT 'Pending',
   PRIMARY KEY (ID),
   UNIQUE KEY (PII_ID),
   FOREIGN KEY (PII_ID) REFERENCES Personal_Identifying_Info(PII_ID) ON DELETE CASCADE ON UPDATE CASCADE
