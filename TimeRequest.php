@@ -91,7 +91,8 @@ require_once "ServerConnection.php";
        border-radius: 4px;
        line-height: 15px;
        width: 200px;
-       font-size: 8pt;
+       font-size: 10pt;
+       cursor:pointer;
        margin-left: 10px;
        position: relative;
      }
