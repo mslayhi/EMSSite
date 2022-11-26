@@ -16,7 +16,7 @@
                 <h2> <a href="#" class ="logo">E M S</a></h2>
                 <div class ="navigation">
                 <a href = "Paystub.php"> Paystub</a>
-                <a href = "TimeRequest.html"> Time Requests</a>
+                <a href = "ProcessTimeRequest.php"> Time Requests</a>
                 <a href = "AccessWrkHrs.php"> Access Hours</a>
                 <a href = "SetSchedule.php"> Set Team Hours</a>
                 <a href = "EmployeeLookup.php">Employee Lookup</a>
