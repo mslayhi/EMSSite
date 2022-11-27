@@ -17,7 +17,7 @@ require_once "ServerConnection.php";
         <section>
             <header>
 
-                <h2> <a href="#" class ="logo">E M S</a></h2>
+                <h2> <a href="logout.php" class ="logo">Sign Out</a></h2>
                 <div class ="navigation">
                 <a href = "Paystub.php"> Paystub</a>
                 <a href = "AccessWrkHrs.php">  Access Hours</a>
@@ -28,11 +28,11 @@ require_once "ServerConnection.php";
             
             </header>
 
-            <div>
+            <!-- <div>
                 <button type="button" class="signout-button" onclick="location.href='logout.php'">
                     <span>Sign Out</span>
                 </button>
-            </div>
+            </div> -->
 
             <div class ="content">
                 <div class info ="info">

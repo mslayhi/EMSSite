@@ -263,8 +263,11 @@ header.ems{
 
   
 .footer {
-  background-color:white;
+  text-align: center;
+  margin-bottom: 1px;
+  margin-left : 1px;
+  width: 200px;
+  height: 200px;
   position: fixed;
-  bottom: 15%;
-  width: 100vw;
-  }
+  bottom: 0;
+}

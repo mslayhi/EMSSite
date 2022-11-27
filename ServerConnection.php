@@ -7,7 +7,7 @@ $errors = array();
 $role = "";
 
 // database connection
-$db= mysqli_connect('localhost:3366', 'root', '', 'EMS');
+$db= mysqli_connect('localhost', 'root', '', 'EMS');
 if(!$db){
   die('Could not Connect to DB: '. mysql_error());
 }

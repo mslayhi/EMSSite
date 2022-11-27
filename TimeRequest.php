@@ -169,13 +169,13 @@ require_once "ServerConnection.php";
       <div class="col-75">
         <textarea id="OtherReason" name="OtherReason" placeholder="If Selected Other, please specify:" style="height:100px" style="width:100%"></textarea>
       </div>
-      <input type="submit" class="registerbtn" name="Register">
+      <input type="submit" class="registerbtn" name="Register" value="Submit Time Off Request">
       <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
-        <span class="">Home Page</span>
+        <span class="">Cancel</span>
         <span class="">
             <ion-icon name="main-page"></ion-icon>
         </span>
-    </button>
+      </button>
     </form>
   </body>
 </html>

@@ -20,7 +20,7 @@ require_once "ServerConnection.php";
                 <a href = "CompanyComm.php">Company Communication</a>
                 <a href = "UploadPay.html"> Upload Employee Paystub</a>
                 <a href = "Feedback.php"> Feedback</a>
-                <a href = "ModifyCommunication.php"> Modify Communication</a>
+                <a href = "ModifyCommunication.php"> Delete Communication</a>
                 <a href = "UpdateCommunication.php"> Update Communication</a>
 
 
