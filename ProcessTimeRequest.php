@@ -86,8 +86,8 @@
                     die("Invalid query: " .mysqli_error());
                 }
                 while($row = $result->fetch_assoc()){
-                    //$id = $row['ID'];
-                    echo 'The ID of for this row is: '.$row['ID'];
+                    $id = $row['ID'];
+                    // echo 'The ID of for this row is: '.$row['ID'];
                     echo "<tr class = 'table-row'>
                     <td class = 'table-data'> $row[ID] </td>
                     <td class = 'table-data'> $row[Employee] </td>
@@ -97,12 +97,11 @@
                     <td class = 'table-data'> $row[EndDate] </td>
                     <td class = 'table-data'> $row[Status] </td>
                     <td class = 'table-data'>
-                        <a class = 'btn btn-primary btn-sm' href = 'ApproveTimeRequest.php?id = $row[ID]'>Aprove </a>
-                        <a class = 'btn btn-danger btn-sm' href = 'DenyTimeRequest.php?id = $row[ID]'>Deny </a>
+                      <a class = 'btn btn-primary btn-sm' href = 'ApproveTimeRequest.php?id = $id'>Approve </a>
+                      <a class = 'btn btn-danger btn-sm' href = 'DenyTimeRequest.php?id = $id'>Deny </a>
                     </td>
                 </tr>";
-                }
-                
+                }                
                 ?>
             </tbody>
         </table>

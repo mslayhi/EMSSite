@@ -117,3 +117,74 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 ?>
+<!-- below code is for time request approval/dny -->
+while($row = $result->fetch_assoc()){
+                    $id = $row['ID'];
+                    // echo 'The ID of for this row is: '.$row['ID'];
+                    echo "<tr class = 'table-row'>
+                    <td class = 'table-data'> $row[ID] </td>
+                    <td class = 'table-data'> $row[Employee] </td>
+                    <td class = 'table-data'> $row[TimeOffType] </td>
+                    <td class = 'table-data'> $row[RequestReason] </td>
+                    <td class = 'table-data'> $row[StartDate] </td>
+                    <td class = 'table-data'> $row[EndDate] </td>
+                    <td class = 'table-data'> $row[Status] </td>
+                    <td class = 'table-data'>
+                      <form action = 'ApproveTimeRequest.php' method = 'POST' >
+                        <input type='submit' Value='Approve' name ='Approve' href = 'ApproveTimeRequest.php?id = $id' class = 'btn btn-primary btn-sm' >
+                        <input type='submit' Value='Deny' name ='Deny' href = 'ApproveTimeRequest.php?id = $id' class = 'btn btn-danger btn-sm' >
+                      </form>
+                    </td>
+                </tr>";
+                }                
+                ?>
+
+
+<!-- this is the action for the approve./deny -->
+<?php
+    include 'ProcessTimeRequest.php';
+    if(isset($id) && isset($_POST['Approve'])){
+        // $id = $_POST["id"];
+        // echo 'The captured id is:'.$id;
+        $sql = "UPDATE TimeOffRequest SET Status = 'Approved' WHERE TimeOffRequest.ID = $id;";
+
+        $result = mysqli_query($db, $sql);
+
+        if(!$result){
+            die("Invalid query: " .mysqli_error());
+        }
+    }
+    if(isset($id) && isset($_POST['Deny'])){
+        $sql = "UPDATE TimeOffRequest SET Status = 'Deny' WHERE TimeOffRequest.ID = $id;";
+
+        $result = mysqli_query($db, $sql);
+
+        if(!$result){
+            die("Invalid query: " .mysqli_error());
+        }
+
+    }
+
+?>
+<script type='text/javascript'>
+  
+    // JavaScript anonymous function
+    (() => {
+        if (window.localStorage) {
+
+            // If there is no item as 'reload'
+            // in localstorage then create one &
+            // reload the page
+            if (!localStorage.getItem('reload')) {
+                localStorage['reload'] = true;
+                window.location.reload();
+            } else {
+
+                // If there exists a 'reload' item
+                // then clear the 'reload' item in
+                // local storage
+                localStorage.removeItem('reload');
+            }
+        }
+    })(); // Calling anonymous function here only
+</script>

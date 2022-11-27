@@ -1,9 +1,7 @@
 <?php
     include 'ProcessTimeRequest.php';
     if(isset($id)){
-        // $id = $_POST["id"];
-        // echo 'The captured id is:'.$id;
-        $sql = "UPDATE TimeOffRequest SET Status = 'Approved' WHERE TimeOffRequest.ID = $id;";
+        $sql = "UPDATE TimeOffRequest SET Status = 'Deny' WHERE TimeOffRequest.ID = $id;";
 
         $result = mysqli_query($db, $sql);
 
@@ -11,9 +9,7 @@
             die("Invalid query: " .mysqli_error());
         }
     }
-    else{
-        echo 'Sorry something went wrong. Please try again';
-    }
+
 ?>
 <script type='text/javascript'>
   
