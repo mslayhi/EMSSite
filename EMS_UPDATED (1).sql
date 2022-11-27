@@ -167,6 +167,16 @@ INSERT INTO Paystub (CreatorID, PII_ID, PayPeriod, PayDate) values
 (1, 1,'04/20/2022 - 05/05/2022', '2022-05-10'),
 (1, 2, '04/20/2022 - 05/05/2022', '2022-05-10');
 
+-- creates Communication table
+CREATE TABLE Communication (
+  ID INT UNSIGNED AUTO_INCREMENT,
+  Communication VARCHAR(1000),
+  PRIMARY KEY (ID)
+);
+INSERT INTO Communication (ID, Communication) values 
+(1, 'We made great revenue this quarter! Lets keep up the goodwork!'), 
+(2, 'Work from home options are now readily available get into contact with your manager to discuss these options'); 
+
 -- creates FeedBack table
 CREATE TABLE FeedBack (
   ID INT UNSIGNED AUTO_INCREMENT,
