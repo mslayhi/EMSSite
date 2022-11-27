@@ -102,6 +102,9 @@
                         if($row['Reply'] == NULL){
                             $row['Reply'] = 'No';
                         }
+                        else{
+                            $row['Reply']  = 'Yes';
+                        }
                         echo "<tr class = 'table-row'>
                         <td class = 'table-data'> $row[ProviderID] </td>
                         <td class = 'table-data'> $row[Feedback] </td>
