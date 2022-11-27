@@ -41,6 +41,19 @@
                 <strong >Welcome Site Admins!</strong>
                 <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, nostrum inventore aperiam perspiciatis quas totam autem adipisci esse. Incidunt at corporis repellat neque, quaerat qui cum! Quibusdam aperiam accusamus accusantium! Impedit, perspiciatis quam. Nulla temporibus aliquam corporis recusandae obcaecati ex nostrum officiis nesciunt, reiciendis facere, consectetur quos sed dolorum? Voluptatem quas velit quo corporis, distinctio ad consequuntur omnis temporibus mollitia perspiciatis veniam minus, unde possimus rerum. Quia doloremque sit, dolorem ipsam odio aspernatur totam ex nostrum error nihil neque vel. Voluptatem iure quisquam accusantium quam eaque laudantium quis cumque, incidunt ab. Magnam eos dolore, recusandae blanditiis necessitatibus neque. Qui, ipsam.</p>
             </div>
+            <div class="footer-container">
+    <div class="footer">
+        <div class="footer-heading footer-1">
+            <h2>About US</h2>
+            <a href="AboutUs.html">About</a>
+        </div>
+        <div class="footer-heading footer-2">
+            <h2>Contact US</h2>
+            <a href="Contactus.html">Contact</a>
+        </div>
+       
+    </div>
+   </div>
         </section>
     </body>
 </html>
