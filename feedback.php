@@ -1,73 +1,134 @@
 <?php
-// Include config file
 include "ServerConnection.php";
 include "feedbackInsert.php";
 ?>
+
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<h2>FEEDBACK FORM</h2>
-<div class="container">
-  <form action="feedbackInsert.php" method="POST">
-    <!-- Failed Message getting fed from feedbackInsert.php -->
-    <?php
-      if(isset($_SESSION['status']))
-      {
-        echo "<h4>".$_SESSION['status']."</h4>";
-        unset($_SESSION['status']);
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: Calibri, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-    ?>
-    <!-- <div class="row">
-      <div class="col-25">
-        <label for="fname">First Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name...">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Last Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
-      </div>
-    </div>
-    <div class="row">
-        <div class="col-25">
-          <label for="empid"> Employee Id</label>
+
+      .container {
+        width: 100%;
+        padding: 50px;
+        background-color: #DCDCDC;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        border-radius: 4px;
+        box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #F5F5F5;
+      }
+
+      input[type=text],
+      textarea {
+        width: 93%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        border-radius: 4px;
+        box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #F5F5F5;
+      }
+
+      div {
+        padding: 10px 0;
+      }
+
+      hr {
+        border: 1px solid #d8bca9;
+        margin-bottom: 25px;
+      }
+
+      .registerbtn {
+        background-color: #0066A2;
+        color: white;
+        padding: 16px 20px;
+        margin: 0px 60px 0px 0px;
+        border: none;
+        cursor: pointer;
+        width: 200px;
+        opacity: 0.9;
+        font-size: 10pt;
+      }
+
+      .registerbtn:hover {
+        background-color: #45a049;
+      }
+
+      .adjust-line-height {
+        line-height: 15px;
+      }
+
+      input[type=submit] {
+        background-color: #0066A2;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: left;
+      }
+
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+
+      .button {
+       background-color: #0066A2;
+       color: white;
+       padding: 12px 20px;
+       border: none;
+       border-radius: 4px;
+       line-height: 15px;
+       width: 200px;
+       font-size: 10pt;
+       cursor:pointer;
+       margin-left: 10px;
+       position: relative;
+     }
+
+     .button:hover {
+       background-color: #02c8db;
+     }
+
+     .button:active {
+       background-color: #88ef9e;
+     }
+    </style>
+  </head>
+  <body>
+    <div class = "form">
+      <form action = "feedbackInsert.php" method = "POST">
+        <div class="container">
+          <center>
+            <h1> FEEDBACK FORM</h1>
+          </center>
+          <hr>
+          <div>
+            <label> Please provide your feedback in the text area below : </label>
+
         </div>
         <div class="col-75">
-          <input type="empid" id="email" name="empid" placeholder="Your employee id..">
+          <textarea id="FeedBack" name="FeedBack" placeholder="Write something..." style="height:100px" style="width:100%" required></textarea>
         </div>
-      </div>
-    </div> -->
-    <div class="row">
-      <div class="col-25">
-        <label for="feed_back">Provide your Feedback Anonymously</label>
-      </div>
-      <div class="col-75">
-        <textarea id="FeedBack" name="FeedBack" placeholder="Write something.." style="height:200px" required></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-40">
-        <input type="submit" value="Submit">
-      </div>
-      <div class="">
-      <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
-        <span class="">Cancel</span>
-        <span class="">
-            <ion-icon name="main-page"></ion-icon>
-        </span>
+        <input type="submit" class="registerbtn" name="Register">
+        <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
+          <span class="">Home Page</span>
+          <span class="">
+              <ion-icon name="main-page"></ion-icon>
+          </span>
       </button>
-      </div>
+      </form>
     </div>
-  </form>
-</div>
-</body>
+  </body>
 </html>
