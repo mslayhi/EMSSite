@@ -121,7 +121,7 @@ include "feedbackInsert.php";
         <div class="col-75">
           <textarea id="FeedBack" name="FeedBack" placeholder="Write something..." style="height:100px" style="width:100%" required></textarea>
         </div>
-        <input type="submit" class="registerbtn" name="Register">
+        <input type="submit" class="registerbtn" name="Register" value="Submit Feedback">
         <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
           <span class="">Home Page</span>
           <span class="">
