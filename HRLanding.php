@@ -1,4 +1,6 @@
-
+<?php
+require_once "ServerConnection.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
