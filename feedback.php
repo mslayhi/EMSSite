@@ -51,7 +51,7 @@ include "feedbackInsert.php";
         <label for="feed_back">Provide your Feedback Anonymously</label>
       </div>
       <div class="col-75">
-        <textarea id="FeedBack" name="FeedBack" placeholder="Write something.." style="height:200px"></textarea>
+        <textarea id="FeedBack" name="FeedBack" placeholder="Write something.." style="height:200px" required></textarea>
       </div>
     </div>
     <div class="row">
