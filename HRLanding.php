@@ -34,7 +34,7 @@
             </div>
 
             <div class ="content">
-              <div class info ="info">
+               <div class info ="info">
                 <h2> Employee Management System!</h2>
                 <strong> Welcome Human Resource Administrators!</strong> <br>
                 <p>Now more than ever users want unified platforms, this projects name E.M.S is designed to be an advanced employee management system, whichever company that uses this software will have the ability to manage employees’ hours, and PTO, and allow the employee to view roles and responsibilities, and what benefits does the company provide for them. This website will enable department managers to access employee information and view their hours, PTO requests, and feedback all in one place. E.M.S will also allow Human Resources administrators access to all employee data and their feedback to the company. 
