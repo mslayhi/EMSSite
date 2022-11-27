@@ -170,8 +170,8 @@ INSERT INTO Paystub (CreatorID, PII_ID, PayPeriod, PayDate) values
 -- creates FeedBack table
 CREATE TABLE FeedBack (
   ID INT UNSIGNED AUTO_INCREMENT,
-  ProviderID INT UNSIGNED,
-  FeedBack VARCHAR(500),
+  ProviderID INT UNSIGNED NOT NULL,
+  FeedBack VARCHAR(500) NOT NULL,
   Reply VARCHAR(100),
   PRIMARY KEY (ID),
   FOREIGN KEY (ProviderID) REFERENCES Personal_Identifying_Info(PII_ID) ON DELETE CASCADE ON UPDATE CASCADE 
