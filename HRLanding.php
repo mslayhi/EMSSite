@@ -12,14 +12,18 @@ require_once "ServerConnection.php";
     </head>
     <body>
         <section>
-            <header>
+             <header>
 
                 <h2> <a href="#" class ="logo">E M S</a></h2>
                 <div class ="navigation">
                 <a href = "InsertNewUser.php"> Insert New User Info</a>
-                <a href = "CompanyComm.html">Company Communication</a>
+                <a href = "CompanyComm.php">Company Communication</a>
                 <a href = "UploadPay.html"> Upload Employee Paystub</a>
                 <a href = "Feedback.php"> Feedback</a>
+                <a href = "ModifyCommunication.php"> Modify Communication</a>
+                <a href = "UpdateCommunication.php"> Update Communication</a>
+
+
                 </div>
 
                
