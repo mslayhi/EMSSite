@@ -9,6 +9,42 @@
         .body{
             background-color: #f1d1bc;
           }
+        .button {
+            background-color: #0066A2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            line-height: 12px;
+            width: 120px;
+            font-size: 8pt;
+            margin-left: 0px;
+            position: absolute;
+        }
+
+        .button:hover {
+            background-color: #02c8db;
+        }
+
+        .button:active {
+            background-color: #88ef9e;
+        }
+        .table{
+            border:1 px solid black;
+          }
+          .table-header{
+            background-color:lightgreen;
+            text-align: center;
+          }
+          .table-data{
+            text-align: center;
+          }
+          .table-row:hover{
+            background-color: #F0DFF2;
+            color:crimson;
+            cursor:pointer;
+            transition:0.3s;
+          }
     </style>
 </head>
 <body class = "body" style="margin:100px 300px 100px 100px;">
@@ -22,35 +58,13 @@
     <br>
     <table class="table" style = "border: 1px solid black">
         <thead class="table-header" style="background-color: lightgreen;">
-            <tr>
+            <tr >
                 <th>UserName</th>
                 <th>Pay Period</th>
                 <th>Pay Date</th>
             </tr>
         </thead>
         <tbody>
-            <style>
-      .button {
-       background-color: #0066A2;
-       color: white;
-       padding: 12px 20px;
-       border: none;
-       border-radius: 4px;
-       line-height: 12px;
-       width: 120px;
-       font-size: 8pt;
-       margin-left: 0px;
-       position: absolute;
-     }
-
-     .button:hover {
-       background-color: #02c8db;
-     }
-
-     .button:active {
-       background-color: #88ef9e;
-     }
-           </style>
             <?php
             include 'ServerConnection.php';
 
@@ -65,10 +79,10 @@
             $row = $result->fetch_assoc();
 
             if(!empty($row)){
-                echo "<tr>
-                <td>$username</td>
-                <td> $row[PayPeriod] </td>
-                <td> $row[PayDate] </td>
+                echo "<tr class = 'table-row' >
+                <td class = 'table-data'>$username</td>
+                <td class = 'table-data'> $row[PayPeriod] </td>
+                <td class = 'table-data'> $row[PayDate] </td>
             </tr>";
             }
             else{
