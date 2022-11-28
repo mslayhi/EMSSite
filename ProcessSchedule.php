@@ -54,7 +54,7 @@ If(isset($employeeID)){
              VALUES ($employeeID, $SchedulerID, '$workDays', '$shift', '$startTime', '$endTime');";
              $result = mysqli_query($db, $sql_insert);
              if($result){
-                echo "<Strong>".'Schedule for EmployeeID '. $employeeID . ' added successfully!'."</Strong>";
+                echo "<Strong style = 'color: green'>".'Schedule for EmployeeID '. $employeeID . ' added successfully!'."</Strong>";
               }
               else {
                 echo "<Strong style = 'color:crimson'>".'Schedule creation failed. Please try again!'."</Strong>";
@@ -76,7 +76,7 @@ If(isset($employeeID)){
             StartTime = '$startTime', EndTime = '$endTime' WHERE Schedule.UserID = $employeeID;";
             $result_update = mysqli_query($db, $sql_update);
             if($result_update){
-                echo "<Strong>".'Schedule for EmployeeID '. $employeeID . ' updated successfully!'."</Strong>";
+                echo "<Strong style = 'color: green'>".'Schedule for EmployeeID '. $employeeID . ' updated successfully!'."</Strong>";
               }else{
                 echo "<Strong style = 'color: crimson'>".'Schedule update failed. Please try again!'."</Strong>";
               }
@@ -91,7 +91,7 @@ If(isset($employeeID)){
             $sql_delete = "DELETE FROM Schedule WHERE UserID = $employeeID;";
             $result_delete = mysqli_query($db, $sql_delete);
             if($result_delete){
-                echo "<Strong>".'Schedule for EmployeeID '. $employeeID . ' deleted successfully!'."</Strong>";
+                echo "<Strong style = 'color: green'>".'Schedule for EmployeeID '. $employeeID . ' deleted successfully!'."</Strong>";
             }else{
                 echo "<Strong style = 'color: crimson'>".'Schedule deletion failed. Please try again!'."</Strong>";
             }
