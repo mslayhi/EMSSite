@@ -1,6 +1,5 @@
 <?php
 require_once "ServerConnection.php";
-//include_once "TimeReq.php";
 ?>
 
 <!DOCTYPE html>
@@ -8,11 +7,12 @@ require_once "ServerConnection.php";
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      body {
+      .body {
         font-family: Calibri, Helvetica, sans-serif;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: #f1d1bc;
       }
 
       .container {
@@ -106,7 +106,7 @@ require_once "ServerConnection.php";
      }
     </style>
   </head>
-  <body>
+  <body class = "body">
     <form action = "TimeReq.php" method = '$_REQUEST'>
       <div class="container">
         <center>

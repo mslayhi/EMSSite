@@ -43,7 +43,7 @@ if ($result_check_piiID->fetch_assoc() == NULL){
     '$startDate', '$endDate'); ";		 
   
     if(mysqli_query($db, $sql_insert)){
-        echo "<h3 style = color:red> Your request has been submitted successfully. </h3>"; 
+        echo "<h3 style = color:green> Your request has been submitted successfully. </h3>"; 
             
     } else{
         echo "ERROR: insert failed $sql_insert. "
