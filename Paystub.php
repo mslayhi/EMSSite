@@ -8,6 +8,7 @@
     <style>
         .body{
             background-color: #f1d1bc;
+            margin: 100px 300px 100px 100px;
           }
         .button {
             background-color: #0066A2;
@@ -47,7 +48,7 @@
           }
     </style>
 </head>
-<body class = "body" style="margin:100px 300px 100px 100px;">
+<body class = "body">
     <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
         <span class="">Home Page</span>
         <span class="">
@@ -56,8 +57,8 @@
     </button>
     <h2><center>Payment Information</center></h2>
     <br>
-    <table class="table" style = "border: 1px solid black">
-        <thead class="table-header" style="background-color: lightgreen;">
+    <table class="table">
+        <thead class="table-header">
             <tr >
                 <th>UserName</th>
                 <th>Pay Period</th>
