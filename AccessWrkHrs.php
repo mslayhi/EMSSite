@@ -8,6 +8,7 @@
     <style>
         .body{
             background-color: #f1d1bc;
+            margin:100px 400px 100px 200px;
           }
           .button {
             background-color: #0066A2;
@@ -45,7 +46,7 @@
           }
         </style>
 </head>
-<body class = "body" style="margin:100px 600px 100px 200px;">
+<body class = "body">
 <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
         <span class="">Home Page</span>
         <span class="">
@@ -58,7 +59,7 @@
     <hr>
     <br>
 
-    <table class="table" style = "border: 1px solid black">
+    <table class="table">
         <thead class="table-header" style="background-color: lightgreen;">
             <tr>
                 <th>PII_ID</th>
