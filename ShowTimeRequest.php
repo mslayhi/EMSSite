@@ -6,6 +6,9 @@
     <title>TimeOffRequest</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <style>
+          .body{
+            background-color: #f1d1bc;
+          }
           .button {
             background-color: #0066A2;
             color: white;
@@ -95,7 +98,7 @@
           
         </style>
 </head>
-<body>
+<body class = "body">
     <div class = "container">
       <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
             <span class="">Home Page</span>
