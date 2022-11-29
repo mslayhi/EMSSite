@@ -28,12 +28,12 @@
             die("Invalid query: " .mysqli_error());
         }
         while($row = $result->fetch_assoc()){
-            echo "<tr>
-            <td> $row[PII_ID] </td>
-            <td> $row[FirstName] </td>
-            <td> $row[LastName] </td>
-            <td> $row[RegularHours] </td>
-            <td> $row[OverTimeHours] </td>
+            echo "<tr class = 'table-row'>
+            <td class = 'table-data'> $row[PII_ID] </td>
+            <td class = 'table-data'> $row[FirstName] </td>
+            <td class = 'table-data'> $row[LastName] </td>
+            <td class = 'table-data'> $row[RegularHours] </td>
+            <td class = 'table-data'> $row[OverTimeHours] </td>
         </tr>";
         }
 

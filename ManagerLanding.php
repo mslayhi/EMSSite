@@ -15,10 +15,10 @@ require_once "ServerConnection.php";
                 <input type="checkbox" id="check">
             <header>
 
-                <h2> <a href="#" class ="logo">E M S</a></h2>
+                <h3> <a href="logout.php" class ="logo">Sign Out</a></h3>
                 <div class ="navigation">
                 <a href = "Paystub.php"> Paystub</a>
-                <a href = "ProcessTimeRequest.php"> Time Requests</a>
+                <a href = "ShowTimeRequest.php"> Time Requests</a>
                 <a href = "AccessWrkHrs.php"> Access Hours</a>
                 <a href = "SetSchedule.php"> Set Team Hours</a>
                 <a href = "EmployeeLookup.php">Employee Lookup</a>
@@ -27,15 +27,6 @@ require_once "ServerConnection.php";
 
 
             </header>
-
-            <div class="navigation">
-                    <button type="button" class="signout-button" onclick="location.href='logout.php'">
-                        <span class="">Sign Out</span>
-                        <span class="">
-                            <ion-icon name="log-out-outline"></ion-icon>
-                        </span>
-                    </button>
-            </div>
 
             <div class ="content">
                    <div class info ="info">

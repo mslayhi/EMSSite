@@ -6,6 +6,10 @@
         <title>EmployeeInfo</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <style>
+            .body{
+                margin: 100px 400px 100px 200px;
+                background-color: #f1d1bc;
+            }
             .button {
                 background-color: #0066A2;
                 color: white;
@@ -24,26 +28,23 @@
             .button:active {
                 background-color: #88ef9e;
             }
-            .body{
-                margin: 100px 300px 100px 200px;
-                background-color: antiquewhite;
-            }
+            
             .table{
-                border: 1px solid black;
-            }
-            .table-header{
-                background-color: lightgreen;
-                text-align: center;
-            }
-            .table-row:hover{
-                background-color: #F3F3F3;
-                color:crimson;
-                cursor:pointer;
-                transition:0.3s ease-in-out;
-            }
-            .table-data{
-                text-align:center;
-            }
+            border:1 px solid black;
+          }
+          .table-header{
+            background-color:lightgreen;
+            text-align: center;
+          }
+          .table-data{
+            text-align: center;
+          }
+          .table-row:hover{
+            background-color: #F0DFF2;
+            color:crimson;
+            cursor:pointer;
+            transition:0.3s;
+          }
             .Provide-Feedback{
                 padding: 50px 50px 50px 0px;
                 font-size: 20px;
@@ -101,6 +102,9 @@
                     while($row = $result->fetch_assoc()){
                         if($row['Reply'] == NULL){
                             $row['Reply'] = 'No';
+                        }
+                        else{
+                            $row['Reply']  = 'Yes';
                         }
                         echo "<tr class = 'table-row'>
                         <td class = 'table-data'> $row[ProviderID] </td>

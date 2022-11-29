@@ -13,6 +13,7 @@ include "feedbackInsert.php";
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: #f1d1bc;
       }
 
       .container {
@@ -115,7 +116,7 @@ include "feedbackInsert.php";
           </center>
           <hr>
           <div>
-            <label> Please provide your feedback in the text area below : </label>
+            <label> <strong>Please provide your feedback in the text area below :</strong> </label>
 
         </div>
         <div class="col-75">
