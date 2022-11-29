@@ -1,5 +1,6 @@
 <?php
     include 'ProcessTimeRequest.php';
+    $id = $row['ID'];
     if(isset($id)){
         // $id = $_POST["id"];
         // echo 'The captured id is:'.$id;
@@ -10,9 +11,6 @@
         if(!$result){
             die("Invalid query: " .mysqli_error());
         }
-    }
-    else{
-        echo 'Sorry something went wrong. Please try again';
     }
 ?>
 <script type='text/javascript'>

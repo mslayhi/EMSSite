@@ -86,19 +86,19 @@
                     die("Invalid query: " .mysqli_error());
                 }
                 while($row = $result->fetch_assoc()){
-                    $id = $row['ID'];
+                    // $id = $row['ID'];
                     // echo 'The ID of for this row is: '.$row['ID'];
                     echo "<tr class = 'table-row'>
-                    <td class = 'table-data'> $row[ID] </td>
-                    <td class = 'table-data'> $row[Employee] </td>
-                    <td class = 'table-data'> $row[TimeOffType] </td>
-                    <td class = 'table-data'> $row[RequestReason] </td>
-                    <td class = 'table-data'> $row[StartDate] </td>
-                    <td class = 'table-data'> $row[EndDate] </td>
-                    <td class = 'table-data'> $row[Status] </td>
+                    <td class = 'table-data'> <form>$row[ID]</form> </td>
+                    <td class = 'table-data'><form> $row[Employee] </form></td>
+                    <td class = 'table-data'> <form>$row[TimeOffType] </form></td>
+                    <td class = 'table-data'> <form>$row[RequestReason] </form></td>
+                    <td class = 'table-data'> <form>$row[StartDate] </form></td>
+                    <td class = 'table-data'> <form>$row[EndDate] </form></td>
+                    <td class = 'table-data'> <form>$row[Status] </form></td>
                     <td class = 'table-data'>
-                      <a class = 'btn btn-primary btn-sm' href = 'ApproveTimeRequest.php?id = $id'>Approve </a>
-                      <a class = 'btn btn-danger btn-sm' href = 'DenyTimeRequest.php?id = $id'>Deny </a>
+                    <form><a class = 'btn btn-primary btn-sm' href = 'ApproveTimeRequest.php?id = $row[ID]'>Approve </a></form>
+                    <form><a class = 'btn btn-danger btn-sm' href = 'DenyTimeRequest.php?id = $row[ID]'>Deny </a></form>
                     </td>
                 </tr>";
                 }                
