@@ -14,11 +14,11 @@ require_once "ServerConnection.php";
         <section>
              <header>
 
-                <h2> <a href="#" class ="logo">E M S</a></h2>
+             <h2> <a href="logout.php" class ="logo">Sign Out</a></h2>
                 <div class ="navigation">
                 <a href = "InsertNewUser.php"> Insert New User Info</a>
                 <a href = "CompanyComm.php">Company Communication</a>
-                <a href = "UploadPay.html"> Upload Employee Paystub</a>
+                <!-- <a href = "UploadPay.html"> Upload Employee Paystub</a> This is a future implementation-->
                 <a href = "Feedback.php"> Feedback</a>
                 <a href = "ModifyCommunication.php"> Delete Communication</a>
                 <a href = "UpdateCommunication.php"> Update Communication</a>
@@ -29,15 +29,6 @@ require_once "ServerConnection.php";
                
 
             </header>
-
-            <div class="navigation">
-                    <button type="button" class="signout-button" onclick="location.href='logout.php'">
-                        <span class="">Sign Out</span>
-                        <span class="">
-                            <ion-icon name="log-out-outline"></ion-icon>
-                        </span>
-                    </button>
-            </div>
 
             <div class ="content">
                <div class info ="info">

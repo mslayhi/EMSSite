@@ -14,11 +14,12 @@ include_once "NewUserInsert.php";
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: #f1d1bc;
       }
 
       .container {
         padding: 50px;
-        background-color:#DCDCDC;
+        background-color: #f1d1bc;
       }
 
       input[type=tel],

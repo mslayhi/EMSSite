@@ -28,6 +28,10 @@
         </thead>
         <tbody>
             <style>
+
+            body{
+                background-color: #f1d1bc;
+            }
          
      
           .button {

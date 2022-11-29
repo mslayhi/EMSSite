@@ -82,11 +82,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
       }
       if($result){
          $_SESSION['Status'] = "Account Updated Successfully!!";
-         header("Location: TestEditPage.php");
+         header("Location: ModifyUser.php");
        }
        else {
            $error = "Update Failed!!! Please Try again.";
-           header("Location: TestEditPage.php");
+           header("Location: ModifyUser.php");
        }
          // fetch needed results
          $NewUser = mysqli_fetch_all($result, MYSQLI_ASSOC);

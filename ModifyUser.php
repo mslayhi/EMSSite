@@ -6,6 +6,8 @@ include "UserUpdateRequest.php";
 <html>
 
 <head>
+
+
 	<script src=
 		"https://code.jquery.com/jquery-3.2.1.min.js">
 	</script>
@@ -21,11 +23,68 @@ include "UserUpdateRequest.php";
 	<script src=
 "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 	</script>
+
+<style>
+		body{
+			background-color: #f1d1bc;
+		}
+		.container{
+			justify-content: center;
+			margin-left: 425px;
+		}
+		.button {
+            background-color: #0066A2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            line-height: 12px;
+            width: 120px;
+            font-size: 8pt;
+            margin-left: 0px;
+            position: absolute;
+        }
+
+        .button:hover {
+            background-color: #02c8db;
+        }
+
+        .button:active {
+            background-color: #88ef9e;
+        }
+		.registerbtn {
+        background-color: #0066A2;
+        color: white;
+		padding: 12px 20px;
+        margin: 0px 60px 0px 0px;
+        border: none;
+		border-radius: 4px;
+        cursor: pointer;
+        width: 200px;
+        opacity: 0.9;
+        font-size: 10pt;
+      }
+
+	  .registerbtn:hover {
+		background-color: #02c8db;
+      }
+
+	  .registerbtn:active {
+            background-color: #88ef9e;
+        }
+
+	</style>
 </head>
 
 <!-- Remember that these feilds get keyed off the id of the input -->
 <body>
 	<form action="UserUpdateRequest.php" method="POST">
+		<button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
+			<span class="">Home Page</span>
+			<span class="">
+				<ion-icon name="main-page"></ion-icon>
+			</span>
+		</button>
 
 		<div class="container">
 			<h1>Modify User</h1>

@@ -18,10 +18,11 @@ include "feedbackInsert.php";
 
       .container {
         width: 100%;
-        padding: 50px;
+        padding: 120px;
         background-color: #DCDCDC;
-        padding: 15px;
-        margin: 5px 0 22px 0;
+        /* padding: 15px; */
+        margin: 10px 50px 22px 0;
+        margin-left: -100px;
         display: inline-block;
         border: none;
         background: #f1f1f1;
@@ -96,6 +97,7 @@ include "feedbackInsert.php";
        cursor:pointer;
        margin-left: 10px;
        position: relative;
+       float: right;
      }
 
      .button:hover {

@@ -14,9 +14,9 @@ require_once "ServerConnection.php";
         <section>
             <header>
 
-                <h2> <a href="#" class ="logo">E M S</a></h2>
+            <h2> <a href="logout.php" class ="logo">Sign Out</a></h2>
                 <div class ="navigation">
-                <a href = "TestEditPage.php"> Modify Users</a>
+                <a href = "ModifyUser.php"> Modify Users</a>
                 <a href = "NewLogin.php"> Create New User Login</a>
                 <a href = "SearchDeleteUser.php"> Delete User</a>
                 <!-- 
@@ -27,15 +27,6 @@ require_once "ServerConnection.php";
 
                 
             </header>
-
-            <div class="navigation">
-                    <button type="button" class="signout-button" onclick="location.href='logout.php'">
-                        <span class="">Sign Out</span>
-                        <span class="">
-                            <ion-icon name="log-out-outline"></ion-icon>
-                        </span>
-                    </button>
-            </div>
 
             <div class ="content">
                    <div class info ="info">

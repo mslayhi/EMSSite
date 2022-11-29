@@ -16,6 +16,7 @@ include "AnnouncementInsert.php";
         justify-content: center;
         height: 100%;
          margin: 0;
+         background-color: #f1d1bc;
       }
       #wrapper {
       min-height:100%;
@@ -27,7 +28,7 @@ include "AnnouncementInsert.php";
       }
       .container {
         padding: 50px;
-        background-color:#DCDCDC;
+        background-color: #f1d1bc;
       }
 
      

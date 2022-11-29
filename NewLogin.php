@@ -14,11 +14,12 @@ include "CreateNewLogin.php";
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: #f1d1bc;
       }
 
       .container {
         padding: 50px;
-        background-color:#DCDCDC;
+        background-color: #f1d1bc;
       }
 
       input[type=tel],
@@ -73,13 +74,38 @@ include "CreateNewLogin.php";
       input[type=submit]:hover {
         background-color: #45a049;
       }
+
+      .button {
+            background-color: #0066A2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            line-height: 12px;
+            width: 120px;
+            font-size: 8pt;
+            top: 80px;
+            margin-left: 0px;
+            position: absolute;
+        }
+
+        .button:hover {
+            background-color: #02c8db;
+        }
+
+        .button:active {
+            background-color: #88ef9e;
+        }
+        *{
+          box-sizing: border-box
+        }
     </style>
   </head>
   <body>
     <form action="CreateNewLogin.php" method="POST">
       <div class="container">
 
-      <button type="button" class="" onclick="location.href='RedirectLandingPage.php'">
+      <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
         <span class="">Home Page</span>
         <span class="">
             <ion-icon name="main-page"></ion-icon>
