@@ -42,24 +42,27 @@ require_once "ServerConnection.php";
                     E.M.S requirements came about from company needs for such systems, it took what other similar systems did and where they lacked and enhanced them where possible</p> <br>
                     <h3 style="color:#F47174;"> Latest News and Announcements!</h3> 
 
+                <?php
+            include_once 'ServerConnection.php';
 
-                        <?php
-                            include_once 'ServerConnection.php';
+            $sql = "SELECT Communication From Communication;";
 
-                            $sql = "SELECT Communication From Communication;";
+            $result = mysqli_query($db, $sql);
+            if(!$result){
+                die("Invalid query: " .mysqli_error());
+            }
+            echo "<table>";
 
-                            $result = mysqli_query($db, $sql);
-                            if(!$result){
-                                die("Invalid query: " .mysqli_error());
-                            }
-                            while($row = $result->fetch_assoc()){
-                                echo "<tr>
-                                <td> $row[Communication] </td>
-                                
-                            </tr>";
-                            }
-                        
-                        ?>
+            while($row = $result->fetch_assoc()){
+                echo "<tr>
+                <td> $row[Communication] </td>
+                
+            </tr>";
+
+            }
+            echo "</table>";
+
+            ?>
                     <div class="footer-container">
                         <div class="footer">
                             <div class="footer-heading footer-1">
