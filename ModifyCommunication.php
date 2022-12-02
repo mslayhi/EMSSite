@@ -57,15 +57,7 @@
           .button:active {
             background-color: #88ef9e;
           }
-          .deletebtn{
-
-            border-radius: 2px;
-            position:absolute;
-             left:212px; 
-             bottom:110px;
-
-          }
-
+          
         </style>
             <?php
             include_once 'ServerConnection.php';
@@ -92,24 +84,28 @@
 </html>
 
 <div class="container">
-                    <div class="card-header">
+<div class="card-header">
                         <h4>Delete an Announcement Below</h4>
                     </div>
-                    
+
+                    <div class="card-body">
 
                         <form action="DeleteAnnouncement.php" method="POST">
+                            <div class="froum-group mb-3">
                                 <label for="">The ID of Announcement for Deletion</label>
                                 <input type="text" name="delete_comm_id" class="form-control">
                             </div>
-                            <div class="deletebtn">
-
+                            <div class="froum-group mb-3">
                                 <button type="submit" name="comm_delete_btn" class="btn btn-primary">Delete Data</button>
                             </div>
                         </form>
 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-   
+
 </body>
 </html>
