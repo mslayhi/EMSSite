@@ -31,9 +31,14 @@
 
             body{
                 background-color: #f1d1bc;
+                margin: 100px 400px 100px 200px;
+
             }
          
-     
+     .container{
+        background-color: #f1d1bc;
+
+     }
           .button {
             background-color: #0066A2;
             color: white;
@@ -52,7 +57,14 @@
           .button:active {
             background-color: #88ef9e;
           }
-          
+          .deletebtn{
+
+            border-radius: 2px;
+            position:absolute;
+             left:212px; 
+             bottom:110px;
+
+          }
 
         </style>
             <?php
@@ -79,26 +91,22 @@
 </body>
 </html>
 
-<div class="card mt-5">
+<div class="container">
                     <div class="card-header">
-                        <h6>Delete an Announcement Below</h6>
+                        <h4>Delete an Announcement Below</h4>
                     </div>
                     
-                    <div class="card-body">
 
                         <form action="DeleteAnnouncement.php" method="POST">
-                            <div class="froum-group mb-3">
                                 <label for="">The ID of Announcement for Deletion</label>
                                 <input type="text" name="delete_comm_id" class="form-control">
                             </div>
-                            <div class="froum-group mb-3">
+                            <div class="deletebtn">
+
                                 <button type="submit" name="comm_delete_btn" class="btn btn-primary">Delete Data</button>
                             </div>
                         </form>
 
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
