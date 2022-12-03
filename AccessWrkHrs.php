@@ -71,8 +71,11 @@
         </thead>
         <tbody> 
             <?php
-            include_once 'AccessWrkHrsProcessing.php';
-            
+              include_once 'AccessWrkHrsProcessing.php';
+              require_once "ServerConnection.php";
+              if(!$_SESSION['username']){
+                echo"<script>location.href='index.php'</script>";
+              }
             ?>
         </tbody>
     </table>

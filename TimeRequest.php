@@ -1,5 +1,8 @@
 <?php
 require_once "ServerConnection.php";
+if(!$_SESSION['username']){
+    echo"<script>location.href='index.php'</script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -171,7 +174,7 @@ require_once "ServerConnection.php";
       </div>
       <input type="submit" class="registerbtn" name="Register" value="Submit Time Off Request">
       <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
-        <span class="">Cancel</span>
+        <span class="">Home Page</span>
         <span class="">
             <ion-icon name="main-page"></ion-icon>
         </span>

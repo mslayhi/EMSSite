@@ -1,6 +1,10 @@
 <?php
 require "ServerConnection.php";
 include "CreateNewLogin.php";
+require_once "ServerConnection.php";
+if(!$_SESSION['username']){
+    echo"<script>location.href='index.php'</script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -99,6 +103,18 @@ include "CreateNewLogin.php";
         *{
           box-sizing: border-box
         }
+        .alert{
+          text-align:center;
+          font-weight: bold;
+          font-size:medium;
+          color:#45a049;
+        }
+        .error{
+          text-align:center;
+          font-weight: bold;
+          font-size:medium;
+          color:#FF0000;
+        }
     </style>
   </head>
   <body>
@@ -113,17 +129,18 @@ include "CreateNewLogin.php";
       </button>
 
       <?php 
-      
-      if(isset($_SESSION['Status']))
-      {
-          ?>
-              <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                  <strong><?= $_SESSION['Status']; ?></strong>
-              </div>
-          <?php 
-          unset($_SESSION['Status']);
-      }
+        if(isset($_SESSION['Status']))
+        {
+            echo "<strong class='alert'>".$_SESSION['Status']."</strong>";
+            unset($_SESSION['Status']);
+        }
+        elseif(isset($_SESSION['Error']))
+        {
+            echo "<strong class='error'>".$_SESSION['Error']."</strong>";
+            unset($_SESSION['Error']);
+        }
 
+        
       ?>
 
         <center>

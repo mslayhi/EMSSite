@@ -46,7 +46,7 @@ if (isset($_POST['user_login'])) {
       $Creator= mysqli_fetch_array($results2);
 
       $_SESSION['username'] = $username;
-      $_SESSION['success'] = "You have successfully logged in";
+      // $_SESSION['success'] = "You have successfully logged in";
       $_SESSION['role'] = $role;
       // $_SESSION['LoginID'] = $Creator;
 

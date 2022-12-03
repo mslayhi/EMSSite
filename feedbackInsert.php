@@ -1,5 +1,7 @@
 <?php
-include_once 'ServerConnection.php';
+include 'ServerConnection.php';
+include 'feedback.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {    
      $FeedBack = trim($_POST['FeedBack']);
@@ -27,20 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		}
     if (empty($sanitized_FeedBack)){
       
-      $_SESSION['status'] = "Please Enter A feedback";
-      header("Location: feedback.php");
+      echo "Please Enter A feedback";
+      // header("Location: feedback.php");
     }
 
     if($result){
-        $_SESSION['status'] = "Feedback submitted successfully";
-        header("Location: feedback.php");
+      echo "<h3 style = color:green> Thank you for your Feedback</h3>";
     }
     else {
-        $_SESSION['status'] = "Failed to submit your Feedback. Try again!.";
-        header("Location: feedback.php");
+      echo "<h3 style = color:red> Feedback insert failed!! Please try again</h3>"; 
     }
         // fetch needed results
-        $NewFeedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        // $NewFeedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
   mysqli_close($db);
 }

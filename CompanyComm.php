@@ -2,6 +2,9 @@
 // Include config file
 include "ServerConnection.php";
 include "AnnouncementInsert.php";
+if(!$_SESSION['username']){
+  echo"<script>location.href='index.php'</script>";
+}
 ?>
 <!DOCTYPE html>
 <html>

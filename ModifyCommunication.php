@@ -57,11 +57,26 @@
           .button:active {
             background-color: #88ef9e;
           }
+          .alert{
+            text-align:center;
+            font-weight: bold;
+            font-size:medium;
+            color:#45a049;
+            }
           
         </style>
             <?php
             include_once 'ServerConnection.php';
             include "DeleteAnnouncement.php";
+            if(!$_SESSION['username']){
+                echo"<script>location.href='index.php'</script>";
+            }
+
+            if(isset($_SESSION['status']))
+            {
+                echo "<strong class='alert'>".$_SESSION['status']."</strong>";
+                unset($_SESSION['status']);
+            }
             $sql = "SELECT ID, Communication  From Communication;";
 
             $result = mysqli_query($db, $sql);

@@ -68,7 +68,10 @@
         <tbody>
             <?php
             include 'ServerConnection.php';
-
+            
+            if(!$_SESSION['username']){
+                echo"<script>location.href='index.php'</script>";
+            }            
             $username = $_SESSION['username'];
 
             $sql = "SELECT PayPeriod, PayDate FROM paystub JOIN login ON paystub.PII_ID = login.PII_ID

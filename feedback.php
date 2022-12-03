@@ -1,8 +1,3 @@
-<?php
-include "ServerConnection.php";
-include "feedbackInsert.php";
-?>
-
 <!DOCTYPE html>
 <html>
   <head>

@@ -18,17 +18,21 @@ if(!$_SESSION['username']){
     <body>
         <section>
             <div class ="content">
-                <header class="header">
+                <div class="header">
 
                     <h2> <a href="logout.php" class ="logo">Sign Out</a></h2>
+                    <br>
                     <div class ="navigation">
-                        <a href = "Paystub.php"> Paystub</a>
+                        <a href = "Paystub.php"> Pay Period Information</a>
                         <a href = "AccessWrkHrs.php">  Access Hours</a>
                         <a href = "TimeRequest.php"> Time Request</a>
                         <a href = "feedback.php"> Feedback</a>
                     </div>
 
-                </header>
+                </div>
+                <br>
+                <br>
+                <br>
                 <div class info ="info">
                     <h2> Employee Management System!</h2>
                     <strong >Welcome Employees!</strong> <br>
@@ -68,7 +72,7 @@ if(!$_SESSION['username']){
                         </div>
                         <div class="footer-heading footer-2">
                             <a href="Contactus.html">Contact Us</a>
-
+                        </div>
                     </div>
                 </div>
             </div>

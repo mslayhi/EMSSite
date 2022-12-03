@@ -1,6 +1,9 @@
 <?php
 require "ServerConnection.php";
 include "UserUpdateRequest.php";
+if(!$_SESSION['username']){
+	echo"<script>location.href='index.php'</script>";
+}
 ?>
 
 <html>
@@ -72,6 +75,12 @@ include "UserUpdateRequest.php";
 	  .registerbtn:active {
             background-color: #88ef9e;
         }
+		.alert{
+		text-align:center;
+		font-weight: bold;
+		font-size:medium;
+		color:#45a049;
+		}
 
 	</style>
 </head>
@@ -88,6 +97,14 @@ include "UserUpdateRequest.php";
 
 		<div class="container">
 			<h1>Modify User</h1>
+			<?php
+				if(isset($_SESSION['Status']))
+				{
+					echo "<strong class='alert'>".$_SESSION['Status']."</strong>";
+					unset($_SESSION['Status']);
+				}
+			?>
+
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="form-group">
