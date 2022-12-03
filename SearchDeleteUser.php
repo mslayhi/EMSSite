@@ -1,6 +1,10 @@
 <?php
 require "ServerConnection.php";
 require "ConfirmUserDeletion.php";
+if(!$_SESSION['username']){
+    echo"<script>location.href='index.php'</script>";
+}
+
 ?>
 
 <html>
@@ -24,54 +28,65 @@ require "ConfirmUserDeletion.php";
 	</script>
 
 <style>
-		body{
-			background-color: #f1d1bc;
-		}
-		.container{
-			justify-content: center;
-			margin-left: 425px;
-		}
-		.button {
-            background-color: #0066A2;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            line-height: 12px;
-            width: 120px;
-            font-size: 8pt;
-            margin-left: 0px;
-            position: absolute;
-        }
-
-        .button:hover {
-            background-color: #02c8db;
-        }
-
-        .button:active {
-            background-color: #88ef9e;
-        }
-		.registerbtn {
-        background-color: #0066A2;
-        color: white;
+	body{
+		background-color: #f1d1bc;
+	}
+	.container{
+		justify-content: center;
+		margin-left: 425px;
+	}
+	.button {
+		background-color: #0066A2;
+		color: white;
 		padding: 12px 20px;
-        margin: 0px 60px 0px 0px;
-        border: none;
+		border: none;
 		border-radius: 4px;
-        cursor: pointer;
-        width: 200px;
-        opacity: 0.9;
-        font-size: 10pt;
-      }
+		line-height: 12px;
+		width: 120px;
+		font-size: 8pt;
+		margin-left: 0px;
+		position: absolute;
+	}
 
-	  .registerbtn:hover {
+	.button:hover {
 		background-color: #02c8db;
-      }
+	}
 
-	  .registerbtn:active {
-            background-color: #88ef9e;
-        }
+	.button:active {
+		background-color: #88ef9e;
+	}
+	.registerbtn {
+		background-color: #0066A2;
+		color: white;
+		padding: 12px 20px;
+		margin: 0px 60px 0px 0px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		width: 200px;
+		opacity: 0.9;
+		font-size: 10pt;
+	}
 
+	.registerbtn:hover {
+		background-color: #02c8db;
+	}
+
+	.registerbtn:active {
+		background-color: #88ef9e;
+	}
+	.alert{
+		text-align:center;
+		font-weight: bold;
+		font-size:medium;
+		color:#45a049;
+	}
+	.error{
+		text-align:center;
+		font-weight: bold;
+		font-size:medium;
+		color:#FF0000;
+	}
 	</style>
 </head>
 
@@ -86,7 +101,21 @@ require "ConfirmUserDeletion.php";
 		</button>
 
 		<div class="container">
-			<h1>Modify User</h1>
+			<h1>Search User</h1>
+			<?php 
+				if(isset($_SESSION['Status']))
+				{
+					echo "<strong class='alert'>".$_SESSION['Status']."</strong>";
+					unset($_SESSION['Status']);
+				}
+				elseif(isset($_SESSION['Error']))
+				{
+					echo "<strong class='error'>".$_SESSION['Error']."</strong>";
+					unset($_SESSION['Error']);
+				}
+
+				
+			?>
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="form-group">
