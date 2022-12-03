@@ -48,14 +48,18 @@ if(!$_SESSION['username']){
                         if(!$result){
                             die("Invalid query: " .mysqli_error());
                         }
+                        echo "<table>";
+
                         while($row = $result->fetch_assoc()){
                             echo "<tr>
                             <td> $row[Communication] </td>
                             
                         </tr>";
+
                         }
-                        
-                    ?>
+                        echo "</table>";
+
+                    ?>                
                 </div>
                 <div class="footer-container">
 

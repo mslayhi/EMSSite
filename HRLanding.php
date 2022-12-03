@@ -31,7 +31,7 @@ if(!$_SESSION['username']){
                 </div>
 
             </header>
-            
+
                <div class info ="info">
                 <h2> Employee Management System!</h2>
                 <strong> Welcome Human Resource Administrators!</strong> <br>
@@ -40,27 +40,27 @@ if(!$_SESSION['username']){
                 <h3 style="color:#F47174;"> Latest News and Announcements!</h3> 
 
 
-               <?php
-            include_once 'ServerConnection.php';
+                <?php
+                        include_once 'ServerConnection.php';
 
-            $sql = "SELECT Communication From Communication;";
+                        $sql = "SELECT Communication From Communication;";
 
-            $result = mysqli_query($db, $sql);
-            if(!$result){
-                die("Invalid query: " .mysqli_error());
-            }
-            echo "<table>";
+                        $result = mysqli_query($db, $sql);
+                        if(!$result){
+                            die("Invalid query: " .mysqli_error());
+                        }
+                        echo "<table>";
 
-            while($row = $result->fetch_assoc()){
-                echo "<tr>
-                <td> $row[Communication] </td>
-                
-            </tr>";
+                        while($row = $result->fetch_assoc()){
+                            echo "<tr>
+                            <td> $row[Communication] </td>
+                            
+                        </tr>";
 
-            }
-            echo "</table>";
+                        }
+                        echo "</table>";
 
-            ?>
+                    ?>                
             </div>
             <div class="footer-container">
     <div class="footer">
