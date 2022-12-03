@@ -50,14 +50,19 @@ E.M.S requirements came about from company needs for such systems, it took what 
             if(!$result){
                 die("Invalid query: " .mysqli_error());
             }
+            echo "<table>";
+
             while($row = $result->fetch_assoc()){
                 echo "<tr>
                 <td> $row[Communication] </td>
                 
             </tr>";
+
             }
+            echo "</table>";
             
             ?>
+                       
             </div>
             <div class="footer-container">
     <div class="footer">

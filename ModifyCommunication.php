@@ -31,9 +31,14 @@
 
             body{
                 background-color: #f1d1bc;
+                margin: 100px 400px 100px 200px;
+
             }
          
-     
+     .container{
+        background-color: #f1d1bc;
+
+     }
           .button {
             background-color: #0066A2;
             color: white;
@@ -53,7 +58,6 @@
             background-color: #88ef9e;
           }
           
-
         </style>
             <?php
             include_once 'ServerConnection.php';
@@ -79,11 +83,11 @@
 </body>
 </html>
 
-<div class="card mt-5">
-                    <div class="card-header">
-                        <h6>Delete an Announcement Below</h6>
+<div class="container">
+<div class="card-header">
+                        <h4>Delete an Announcement Below</h4>
                     </div>
-                    
+
                     <div class="card-body">
 
                         <form action="DeleteAnnouncement.php" method="POST">
@@ -102,6 +106,6 @@
         </div>
     </div>
 
-   
+
 </body>
 </html>

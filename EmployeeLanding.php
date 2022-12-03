@@ -36,6 +36,8 @@ if(!$_SESSION['username']){
                     E.M.S requirements came about from company needs for such systems, it took what other similar systems did and where they lacked and enhanced them where possible</p> <br>
                     <h3 style="color:#F47174;"> Latest News and Announcements!</h3> 
 
+                <?php
+            include_once 'ServerConnection.php';
 
                     <?php
                         include_once 'ServerConnection.php';
@@ -53,7 +55,7 @@ if(!$_SESSION['username']){
                         </tr>";
                         }
                         
-                        ?>
+                    ?>
                     </div>
                 </div>
 

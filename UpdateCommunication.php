@@ -31,6 +31,14 @@
             <style>
          
      
+         body{
+                background-color: #f1d1bc;
+                margin: 100px 400px 100px 200px;
+            }
+            .container{
+        background-color: #f1d1bc;
+
+     }
           .button {
             background-color: #0066A2;
             color: white;
@@ -77,7 +85,7 @@
 </html>
 
 
-<div class="card mt-5">
+<div class="container">
                     <div class="card-header">
                         <h4>Update Announcements Below</h4>
                     </div>
@@ -106,7 +114,5 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
