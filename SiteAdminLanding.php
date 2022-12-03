@@ -1,6 +1,10 @@
 <?php
 require_once "ServerConnection.php";
+if(!$_SESSION['username']){
+    echo"<script>location.href='index.php'</script>";
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,7 +16,7 @@ require_once "ServerConnection.php";
     </head>
     <body>
         <section>
-            <header>
+            <header class="header">
 
             <h2> <a href="logout.php" class ="logo">Sign Out</a></h2>
                 <div class ="navigation">

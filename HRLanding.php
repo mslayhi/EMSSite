@@ -1,6 +1,10 @@
 <?php
 require_once "ServerConnection.php";
+if(!$_SESSION['username']){
+    echo"<script>location.href='index.php'</script>";
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,31 +16,28 @@ require_once "ServerConnection.php";
     </head>
     <body>
         <section>
-             <header>
-
-             <h2> <a href="logout.php" class ="logo">Sign Out</a></h2>
-                <div class ="navigation">
-                <a href = "InsertNewUser.php"> Insert New User Info</a>
-                <a href = "CompanyComm.php">Company Communication</a>
-                <!-- <a href = "UploadPay.html"> Upload Employee Paystub</a> This is a future implementation-->
-                <a href = "Feedback.php"> Feedback</a>
-                <a href = "ModifyCommunication.php"> Delete Communication</a>
-                <a href = "UpdateCommunication.php"> Update Communication</a>
-
-
-                </div>
-
-               
-
-            </header>
 
             <div class ="content">
+            <header>
+                
+                <h2> <a href="logout.php" class ="logo">Sign Out</a></h2>
+                <div class ="navigation">
+                    <a href = "InsertNewUser.php"> Insert New User Info</a>
+                    <a href = "CompanyComm.php">Company Communication</a>
+                    <!-- <a href = "UploadPay.html"> Upload Employee Paystub</a> This is a future implementation-->
+                    <a href = "Feedback.php"> Feedback</a>
+                    <a href = "ModifyCommunication.php"> Delete Communication</a>
+                    <a href = "UpdateCommunication.php"> Update Communication</a>
+                </div>
+
+            </header>
+            
                <div class info ="info">
                 <h2> Employee Management System!</h2>
                 <strong> Welcome Human Resource Administrators!</strong> <br>
                 <p>Now more than ever users want unified platforms, this projects name E.M.S is designed to be an advanced employee management system, whichever company that uses this software will have the ability to manage employees’ hours, and PTO, and allow the employee to view roles and responsibilities, and what benefits does the company provide for them. This website will enable department managers to access employee information and view their hours, PTO requests, and feedback all in one place. E.M.S will also allow Human Resources administrators access to all employee data and their feedback to the company. 
-E.M.S requirements came about from company needs for such systems, it took what other similar systems did and where they lacked and enhanced them where possible</p> <br>
-<h3 style="color:#F47174;"> Latest News and Announcements!</h3> 
+                    E.M.S requirements came about from company needs for such systems, it took what other similar systems did and where they lacked and enhanced them where possible</p> <br>
+                <h3 style="color:#F47174;"> Latest News and Announcements!</h3> 
 
 
                 <?php

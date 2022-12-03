@@ -1,6 +1,5 @@
-<?php include('ServerConnection.php') 
-
-
+<?php 
+include('ServerConnection.php');
 ?>
 
 <!DOCTYPE html>

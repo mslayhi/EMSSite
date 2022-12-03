@@ -1,6 +1,8 @@
 <?php
 require_once "ServerConnection.php";
-
+if(!$_SESSION['username']){
+    echo"<script>location.href='index.php'</script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,26 +17,18 @@ require_once "ServerConnection.php";
     </head>
     <body>
         <section>
-            <header>
-
-                <h2> <a href="logout.php" class ="logo">Sign Out</a></h2>
-                <div class ="navigation">
-                <a href = "Paystub.php"> Paystub</a>
-                <a href = "AccessWrkHrs.php">  Access Hours</a>
-                <a href = "TimeRequest.php"> Time Request</a>
-                <a href = "feedback.php"> Feedback</a>
-                </div>
-
-            
-            </header>
-
-            <!-- <div>
-                <button type="button" class="signout-button" onclick="location.href='logout.php'">
-                    <span>Sign Out</span>
-                </button>
-            </div> -->
-
             <div class ="content">
+                <header class="header">
+
+                    <h2> <a href="logout.php" class ="logo">Sign Out</a></h2>
+                    <div class ="navigation">
+                        <a href = "Paystub.php"> Paystub</a>
+                        <a href = "AccessWrkHrs.php">  Access Hours</a>
+                        <a href = "TimeRequest.php"> Time Request</a>
+                        <a href = "feedback.php"> Feedback</a>
+                    </div>
+
+                </header>
                 <div class info ="info">
                     <h2> Employee Management System!</h2>
                     <strong >Welcome Employees!</strong> <br>
@@ -43,35 +37,35 @@ require_once "ServerConnection.php";
                     <h3 style="color:#F47174;"> Latest News and Announcements!</h3> 
 
 
-                        <?php
-                            include_once 'ServerConnection.php';
+                    <?php
+                        include_once 'ServerConnection.php';
 
-                            $sql = "SELECT Communication From Communication;";
+                        $sql = "SELECT Communication From Communication;";
 
-                            $result = mysqli_query($db, $sql);
-                            if(!$result){
-                                die("Invalid query: " .mysqli_error());
-                            }
-                            while($row = $result->fetch_assoc()){
-                                echo "<tr>
-                                <td> $row[Communication] </td>
-                                
-                            </tr>";
-                            }
+                        $result = mysqli_query($db, $sql);
+                        if(!$result){
+                            die("Invalid query: " .mysqli_error());
+                        }
+                        while($row = $result->fetch_assoc()){
+                            echo "<tr>
+                            <td> $row[Communication] </td>
+                            
+                        </tr>";
+                        }
                         
                         ?>
-                    <div class="footer-container">
-                        <div class="footer">
-                            <div class="footer-heading footer-1">
-                                <h2>About US</h2>
-                                <a href="AboutUs.html">About</a>
-                            </div>
-                            <div class="footer-heading footer-2">
-                                <h2>Contact US</h2>
-                                <a href="Contactus.html">Contact</a>
-                            </div>
+                    </div>
+                </div>
 
+                <div class="footer-container">
+
+                    <div class="footer">
+                        <div class="footer-heading footer-1">
+                            <a href="AboutUs.html">About Us</a>
                         </div>
+                        <div class="footer-heading footer-2">
+                            <a href="Contactus.html">Contact Us</a>
+
                     </div>
                 </div>
             </div>
