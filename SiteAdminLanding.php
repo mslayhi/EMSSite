@@ -56,10 +56,9 @@ E.M.S requirements came about from company needs for such systems, it took what 
 
             }
             echo "</table>";
-
-            ?>
             
             ?>
+                       
             </div>
             <div class="footer-container">
     <div class="footer">
