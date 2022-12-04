@@ -103,7 +103,9 @@
        background-color: #88ef9e;
      }
     </style>
+
   </head>
+
   <body>
     <div class = "form">
       <form action = "feedbackInsert.php" method = "POST">
@@ -125,7 +127,7 @@
           <span class="">
               <ion-icon name="main-page"></ion-icon>
           </span>
-      </button>
+        </button>
       </form>
     </div>
   </body>
