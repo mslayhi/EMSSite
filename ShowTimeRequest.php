@@ -127,7 +127,11 @@
                 
                 <?php
                 include 'ServerConnection.php';
-                //get required field to populate data in the columns of html table defined above.
+                if(!$_SESSION['username']){
+                  echo"<script>location.href='index.php'</script>";
+                }
+                
+                    //get required field to populate data in the columns of html table defined above.
                 $sql = "SELECT ID , concat(FirstName,' ', LastName) as Employee, TimeOffType, RequestReason, StartDate, EndDate, Status From TimeOffRequest
                     JOIN personal_identifying_info ON TimeOffRequest.PII_ID = personal_identifying_info.PII_ID;";
 

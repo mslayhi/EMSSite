@@ -1,3 +1,10 @@
+<?php
+require "ServerConnection.php";
+if(!$_SESSION['username']){
+    echo"<script>location.href='index.php'</script>";
+}
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -8,23 +15,51 @@
     </head>
 
     <style>
-        @import url("SiteStyle.css");
+        .body{
+            background-color: #f1d1bc;
+            margin: 100px 300px 100px 100px;
+        }
+        .button {
+            background-color: #0066A2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            line-height: 12px;
+            width: 120px;
+            font-size: 8pt;
+            top: 80px;
+            margin-left: 0px;
+            position: absolute;
+            
+        }
+
+        .button:hover {
+            background-color: #02c8db;
+        }
+
+        .button:active {
+            background-color: #88ef9e;
+        }
     </style>
 
-    <body style = background-color:antiquewhite;>
-        <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
+    <body class="body">
+        <div class="content">
+            <button type="button" class="button" onclick="location.href='RedirectLandingPage.php'">
 
-            <span class="">Home Page</span>
-    
-            <span class="">
-    
-                <ion-icon name="main-page"></ion-icon>
-    
-            </span>
-    
-        </button>
-
-        <p class="AllMeals">All you need as an Employer </p>
+                <span class="">Home Page</span>
+        
+                <span class="">
+        
+                    <ion-icon name="main-page"></ion-icon>
+        
+                </span>
+        
+            </button>
+        </div>
+        <br>
+        <br>
+        <br>
 
         <section class="service">
             
@@ -46,6 +81,9 @@
                     </p>
      
                 </div>
+                <br>
+                <br>
+                <br>
                 <div class="box">
                      
                     <!-- Email -->
@@ -64,6 +102,9 @@
                     </p>
      
                 </div>
+                <br>
+                <br>
+                <br>
                 <div class="box">
                     <img src="Phone.jpg" width="25" height="25"
                          alt= "color_image">

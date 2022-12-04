@@ -67,10 +67,10 @@ if(!$_SESSION['username']){
 
                     <div class="footer">
                         <div class="footer-heading footer-1">
-                            <a href="AboutUs.html">About Us</a>
+                            <a href="AboutUs.php">About Us</a>
                         </div>
                         <div class="footer-heading footer-2">
-                            <a href="Contactus.html">Contact Us</a>
+                            <a href="Contactus.php">Contact Us</a>
                         </div>
                     </div>
                 </div>

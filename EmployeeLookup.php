@@ -71,6 +71,10 @@
            
             <?php
             include_once 'ServerConnection.php';
+            if(!$_SESSION['username']){
+              echo"<script>location.href='index.php'</script>";
+            }
+
 
             $sql = "SELECT UserID, FirstName, LastName From Employee
                 JOIN personal_identifying_info ON Employee.PII_ID = personal_identifying_info.PII_ID;";
