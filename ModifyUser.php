@@ -216,7 +216,7 @@ if(!$_SESSION['username']){
 				};
 
 				// xhttp.open("GET", "filename", true);
-				xmlhttp.open("GET", "TestEditOutput.php?PII_ID=" + str, true);
+				xmlhttp.open("GET", "Output.php?PII_ID=" + str, true);
 				
 				// Sends the request to the server
 				xmlhttp.send();
